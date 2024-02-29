@@ -1,4 +1,5 @@
 
+import { ChakraProvider } from '@chakra-ui/react';
 import Header from './components/Header'
 import Inicio from './pages/Inicio'
 
@@ -9,15 +10,15 @@ function App() {
 
   return (
     <>
-      <div className='container mx-auto'>
+      <ChakraProvider>
+        <div className='container  mx-auto '>
+          <Header />
+          <main className=' container mx-auto w-[70%] '>
+            <Inicio />
+          </main>
 
-        <Header />
-        
-        <div className='h-[100vh]'>
-          <Inicio />
         </div>
-      
-      </div>
+      </ChakraProvider>
 
     </>
   )
