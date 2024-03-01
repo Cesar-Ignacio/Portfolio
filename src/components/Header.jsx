@@ -24,7 +24,7 @@ const Header = () => {
             </div>
             <nav className='justify-self-end self-center font-bold '>
                 <ul className='flex gap-5 items-center text-silver-800 dark:text-silver-200 text-[1rem] tracking-[1px]' >
-                    <li>Inicio</li>
+                    <li className='text-fountain-blue-700 dark:text-fountain-blue-600  '>Inicio</li>
                     <li>Proyectos</li>
                     <li>Contacto</li>
                     <li className='flex cursor-pointer transition-all duration-500 ease-in-out' onClick={cambiarTema}>
