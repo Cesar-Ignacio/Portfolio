@@ -12,8 +12,10 @@ function App() {
     <>
       <ChakraProvider>
         <div className='container  mx-auto '>
-          <Header />
-          <main className=' container mx-auto w-[70%] '>
+          <header className='container bg-opacity-40  backdrop-filter backdrop-blur-2xl sticky top-0 z-50  ' >
+            <Header />
+          </header>
+          <main className=' container mx-auto mt-[1rem]'>
             <Inicio />
           </main>
 

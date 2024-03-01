@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { Avatar, Tooltip } from '@chakra-ui/react'
+import { Avatar, Tooltip, WrapItem } from '@chakra-ui/react'
 import cv from '../../public/CV-CESAR-TELLO.pdf'
 import { Spotlight } from '../components/ui/Spotlight'
 const Inicio = () => {
@@ -13,23 +13,26 @@ const Inicio = () => {
 
 
   return (
-    <div className='grid grid-cols-2 h-[80vh] p-3 rounded-[2rem]'>
-      <Spotlight
-        className="-top-40 left-0 md:left-60 md:-top-20"
-        fill="blue"
-      />
+    <div className='grid sm:grid-cols-2 xl:w-[70%] mx-auto p-3 rounded-[2rem]  dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative '>
 
-      <div className='justify-self-center self-center text-silver-950 dark:text-silver-100 tracking-[1px]'>
+      {/* Efecto en pantalla */}
+      <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill='#00dede' />
+
+      {/* Radial gradient for the container to give a faded look */}
+      <div className=" transition-all duration-300 ease-linear absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-[#1a2b2b] bg-silver-200 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,#1a2b2b)]"></div>
+
+      {/* Presentacion */}
+      <div className='justify-self-center self-center text-silver-950 dark:text-silver-100 tracking-[1px] relative z-20 '>
         <div className='flex flex-col gap-2'>
-          <h1 className='text-[4.2rem]  font-bold'>César Aquino</h1>
+          <h1 className='text-[1.5rem] font-bold bg-clip-text xl:dark:text-transparent bg-gradient-to-bl from-silver-100 to-silver-400'>César Aquino</h1>
           <div className='flex items-center'>
-            <strong className=' text-[1.5rem] text-fountain-blue-700 dark:text-fountain-blue-600  '> Desarrollador Frontend</strong>
-            <iframe className='w-[3rem] h-[3rem]' src="https://lottie.host/embed/dbb5c84b-7675-4da0-b8ae-820af9f17c24/GokBzvyzUc.json"></iframe>
+            <strong className=' text-[1.4rem] text-fountain-blue-700 dark:text-fountain-blue-600  '> Desarrollador Frontend</strong>
+            <iframe className='w-[2.8rem] h-[2.8rem]' src="https://lottie.host/embed/dbb5c84b-7675-4da0-b8ae-820af9f17c24/GokBzvyzUc.json" ></iframe>
           </div>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, voluptatem.</p>
         </div>
         {/* Redes */}
-        <div className=' flex mt-[2rem] justify-evenly gap-5'>
+        <div className=' flex mt-[2rem] justify-start xl:justify-evenly  gap-5'>
           <Tooltip hasArrow label='Github' bg='gray.300' color='black'>
             <a href="https://github.com/Cesar-Ignacio" target='_blank'>
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-github w-[2.3rem]" viewBox="0 0 16 16">
@@ -56,12 +59,14 @@ const Inicio = () => {
         </div>
 
       </div>
-      <div className='flex justify-center items-center'>
-        {/* <div className=' w-[84%] h-[80%] rounded-[50%] overflow-hidden border-[2px] border-solid  shadow-[0px_0px_30px] dark:shadow-fountain-blue-700 dark:border-fountain-blue-700 shadow-shark-900 border-shark-900  '>
-          <img src="https://i.postimg.cc/V6TM1YdP/1696083335092-1696083236598-0-20230930-110807-Noise-Remove-x1-Photo-Room.png" className='w-[100%] h-[100%] object-cover ' alt="img" />
-        </div> */}
-        <Avatar style={{ width: '20rem', height: '20rem' }} name='Segun Adebayo' src='https://i.postimg.cc/gcqBYQGL/1696083335092-1696083236598-0-20230930-110807-Noise-Remove-x1-Photo-Room.png' />
+
+      {/* Avatar */}
+      <div className='flex justify-center items-center row-start-1 xl:col-start-2 justify-self-start '>
+        <WrapItem className=' w-[8rem] h-[8rem]'>
+          <Avatar style={{ width:'100%', height:'100%', borderColor: '#088c96' }} className='dark:drop-shadow-[2px_2px_20px_#088c96] border-[3px] border-solid' name='Cesar Aquino' src='https://i.postimg.cc/V6TM1YdP/1696083335092-1696083236598-0-20230930-110807-Noise-Remove-x1-Photo-Room.png' />
+        </WrapItem>
       </div>
+
     </div>
   )
 }
