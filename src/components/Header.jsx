@@ -47,8 +47,8 @@ const Header = () => {
                             <li key={indice} className='hidden sm:block'><a href="">{seccion.name}</a></li>
                         ))
                     }
-                    <li className='flex  transition-all duration-500 ease-in-out' onClick={cambiarTema}>
-                        <button>
+                    <li className='transition-all duration-500 ease-in-out' onClick={cambiarTema}>
+                        <IconButton colorScheme='transparent'>
                             {
                                 (iconTheme === 'dark') ? (
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-brightness-high-fill w-[2rem] fill-silver-400" viewBox="0 0 16 16">
@@ -61,7 +61,7 @@ const Header = () => {
                                     </svg>
                                 )
                             }
-                        </button>
+                        </IconButton>
                     </li >
                     <li className='sm:hidden block'><IconButton colorScheme='transparent'
                         aria-label='Menu' ref={btnRef} onClick={onOpen}
@@ -104,10 +104,6 @@ const Header = () => {
                                 </button>
                             ))
                         }
-
-
-
-
 
                     </DrawerBody>
 
