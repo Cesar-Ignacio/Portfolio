@@ -13,7 +13,7 @@ const Inicio = () => {
 
 
   return (
-    <div className='grid sm:grid-cols-2 xl:w-[70%] mx-auto p-3 rounded-[2rem]  dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative '>
+    <div className='grid sm:grid-cols-2 xl:w-[70%] mx-auto p-3 rounded-[2rem]  dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative gap-2'>
 
       {/* Efecto en pantalla */}
       <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill='#00dede' />

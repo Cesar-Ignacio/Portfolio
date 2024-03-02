@@ -1,9 +1,25 @@
-import React, { useState } from 'react'
+import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
+import { IconButton, useDisclosure } from '@chakra-ui/react';
+import React, { useContext, useRef, useState } from 'react'
+import { SectionsContext } from '../context/SectionsContext';
+
+import {
+    Drawer,
+    DrawerBody,
+    DrawerHeader,
+    DrawerOverlay,
+    DrawerContent,
+    DrawerCloseButton,
+} from '@chakra-ui/react'
 
 const Header = () => {
 
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    const btnRef = useRef()
     const [iconTheme, setIconTheme] = useState(localStorage.getItem("theme") || (localStorage.setItem("theme", "light"), "light"));
 
+
+    const { listaSecciones } = useContext(SectionsContext);
 
     const cambiarTema = () => {
 
@@ -17,6 +33,8 @@ const Header = () => {
 
     }
 
+
+
     return (
         <div className='grid grid-cols-2 px-4 py-5 mx-auto xl:w-[70%]  ' >
             <div className=''>
@@ -24,10 +42,11 @@ const Header = () => {
             </div>
             <nav className='justify-self-end self-center font-bold '>
                 <ul className='flex gap-5 items-center text-silver-950 dark:text-silver-200 text-[1rem] tracking-[1px]' >
-                    <li className='text-fountain-blue-700 dark:text-fountain-blue-600  '><a href="">Inicio</a></li>
-                    <li><a href="">Técnologias</a></li>
-                    <li><a href="">Proyectos</a></li>
-                    <li><a href="">Contacto</a></li>
+                    {
+                        listaSecciones.map((seccion, indice) => (
+                            <li key={indice} className='hidden sm:block'><a href="">{seccion.name}</a></li>
+                        ))
+                    }
                     <li className='flex  transition-all duration-500 ease-in-out' onClick={cambiarTema}>
                         <button>
                             {
@@ -44,9 +63,58 @@ const Header = () => {
                             }
                         </button>
                     </li >
+                    <li className='sm:hidden block'><IconButton colorScheme='transparent'
+                        aria-label='Menu' ref={btnRef} onClick={onOpen}
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-list w-[2.5rem] dark:text-silver-400 text-silver-800 " viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                        </svg>
+                    </IconButton>
+                    </li>
+
                 </ul>
             </nav>
-        </div>
+
+            <Drawer
+                isOpen={isOpen}
+                placement='right'
+                onClose={onClose}
+                finalFocusRef={btnRef}
+                size={'full'}
+
+            >
+                <DrawerOverlay />
+                <DrawerContent  >
+
+                    <DrawerHeader className='bg-silver-200 dark:bg-[#1a2b2b] flex justify-between ' >
+                        <strong className=' text-[2rem] text-silver-900 dark:text-silver-200'>Ces<span className='text-[2rem] text-fountain-blue-700 dark:text-fountain-blue-600 '>Dev.</span></strong>
+
+                        <IconButton aria-label='Search database' onClick={onClose} colorScheme='transparent' >
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-x-lg w-[2rem] dark:text-silver-200 text-silver-950 " viewBox="0 0 16 16">
+                                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                            </svg>
+                        </IconButton>
+                    </DrawerHeader>
+
+                    <DrawerBody className='bg-silver-200 dark:bg-[#1a2b2b] flex flex-col gap-3'>
+                        {
+                            listaSecciones.map((seccion, indece) => (
+                                <button key={indece}  className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#323c48,45%,#637b94,55%,#323c48)] bg-[length:200%_100%] px-6 font-medium text-silver-200 tracking-[1.5px] transition-colors ">
+                                    {seccion.name}
+                                </button>
+                            ))
+                        }
+
+
+
+
+
+                    </DrawerBody>
+
+                </DrawerContent>
+            </Drawer>
+
+        </div >
     )
 }
 
