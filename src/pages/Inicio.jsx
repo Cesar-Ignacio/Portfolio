@@ -16,7 +16,7 @@ const Inicio = () => {
     <div className='grid sm:grid-cols-3  md:grid-cols-2  xl:w-[70%] mx-auto p-3 rounded-[2rem]  dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative gap-2 sm:gap-0'>
 
       {/* Efecto en pantalla */}
-      <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill='#00dede' />
+      <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill='white' />
 
       {/* Radial gradient for the container to give a faded look */}
       <div className=" transition-all duration-300 ease-linear absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-[#1a2b2b] bg-silver-200 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,#1a2b2b)]"></div>
