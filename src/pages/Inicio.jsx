@@ -13,7 +13,7 @@ const Inicio = () => {
 
 
   return (
-    <div className='grid sm:grid-cols-2 xl:w-[70%] mx-auto p-3 rounded-[2rem]  dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative gap-2'>
+    <div className='grid sm:grid-cols-3  md:grid-cols-2  xl:w-[70%] mx-auto p-3 rounded-[2rem]  dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative gap-2 sm:gap-0'>
 
       {/* Efecto en pantalla */}
       <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill='#00dede' />
@@ -22,11 +22,11 @@ const Inicio = () => {
       <div className=" transition-all duration-300 ease-linear absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-[#1a2b2b] bg-silver-200 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,#1a2b2b)]"></div>
 
       {/* Presentacion */}
-      <div className='justify-self-center self-center text-silver-950 dark:text-silver-100 tracking-[1px] relative z-20 '>
+      <div className='justify-self-center self-center text-silver-950 dark:text-silver-100 tracking-[1px] relative z-20  sm:col-start-1 sm:col-end-3 md:col-start-1 md:col-end-2 '>
         <div className='flex flex-col gap-2'>
-          <h1 className='text-[1.5rem] font-bold bg-clip-text xl:dark:text-transparent bg-gradient-to-bl from-silver-100 to-silver-400'>César Aquino</h1>
+          <h1 className='text-[1.5rem] font-bold bg-clip-text xl:dark:text-transparent bg-gradient-to-bl from-silver-100 to-silver-400 sm:text-[2rem] md:text-[3rem] xl:text-[4rem]'>César Aquino</h1>
           <div className='flex items-center'>
-            <strong className=' text-[1.4rem] text-fountain-blue-700 dark:text-fountain-blue-600  '> Desarrollador Frontend</strong>
+            <strong className=' text-[1.4rem] text-fountain-blue-700 dark:text-fountain-blue-600 xl:text-[1.5rem] '> Desarrollador Frontend</strong>
             <iframe className='w-[2.8rem] h-[2.8rem]'  title="GatitoProgramador" src="https://lottie.host/embed/dbb5c84b-7675-4da0-b8ae-820af9f17c24/GokBzvyzUc.json" ></iframe>
           </div>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, voluptatem.</p>
@@ -61,10 +61,9 @@ const Inicio = () => {
       </div>
 
       {/* Avatar */}
-      <div className='flex justify-center items-center row-start-1 xl:col-start-2 justify-self-start '>
-        <WrapItem className=' w-[8rem] h-[8rem]'>
-          <Avatar style={{ width:'100%', height:'100%', borderColor: '#088c96' }} className='dark:drop-shadow-[2px_2px_20px_#088c96] border-[3px] border-solid' name='Cesar Aquino' src='https://i.postimg.cc/V6TM1YdP/1696083335092-1696083236598-0-20230930-110807-Noise-Remove-x1-Photo-Room.png' />
-        </WrapItem>
+      <div className='flex  items-center justify-self-start row-start-1  sm:col-start-3 sm:col-end-4  md:col-start-2 md:col-end-3 sm:justify-self-center ' >     
+          
+          <Avatar size={'2xl'} style={{ borderColor: '#088c96' }} className='dark:drop-shadow-[2px_2px_20px_#088c96] border-[3px] border-solid' name='Cesar Aquino' src='https://i.postimg.cc/V6TM1YdP/1696083335092-1696083236598-0-20230930-110807-Noise-Remove-x1-Photo-Room.png' />
       </div>
 
     </div>

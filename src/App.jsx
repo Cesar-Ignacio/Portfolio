@@ -17,7 +17,7 @@ function App() {
             <header className='container bg-opacity-40  backdrop-filter backdrop-blur-2xl sticky top-0 z-50  ' >
               <Header />
             </header>
-            <main className=' container mx-auto mt-[1rem]'>
+            <main className=' container mx-auto mt-[1rem] lg:mt-[5rem] '>
               <Inicio />
             </main>
 
