@@ -19,7 +19,7 @@ const Inicio = () => {
 
 
   return (
-    <div className='grid sm:grid-cols-3  md:grid-cols-2  xl:w-[70%] mx-auto p-3 rounded-[2rem]  dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative gap-2 sm:gap-0'>
+    <div className='grid sm:grid-cols-3  md:grid-cols-2 xl:w-[70%] mx-auto  rounded-[2rem]  dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative gap-2 sm:gap-0'>
 
       {/* Efecto en pantalla */}
       <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill='#088c96' />
@@ -35,7 +35,7 @@ const Inicio = () => {
             <strong className=' text-[1.4rem] text-fountain-blue-700 dark:text-fountain-blue-600 xl:text-[1.5rem] '>{t("presentation.specialty")}</strong>
             <iframe className='w-[2.8rem] h-[2.8rem]' title="GatitoProgramador" src="https://lottie.host/embed/dbb5c84b-7675-4da0-b8ae-820af9f17c24/GokBzvyzUc.json" ></iframe>
           </div>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, voluptatem.</p>
+          <p>{t("presentation.summary")}</p>
         </div>
         {/* Redes */}
         <div className=' flex mt-[2rem] justify-start gap-5'>

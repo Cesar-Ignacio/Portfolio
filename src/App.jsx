@@ -13,11 +13,11 @@ function App() {
     <>
       <ChakraProvider>
         <SectionsProvider>
-          <div className='container  mx-auto '>
-            <header className='container bg-opacity-40  backdrop-filter backdrop-blur-2xl sticky top-0 z-50  ' >
+          <div className='container  mx-auto px-3'>
+            <header className='container py-5  sm:px-0 bg-opacity-40  backdrop-filter backdrop-blur-2xl sticky top-0 z-50  ' >
               <Header />
             </header>
-            <main className=' container mx-auto mt-[1rem] lg:mt-[5rem] '>
+            <main className=' container mx-auto mt-[1rem] lg:mt-[5rem]'>
               <Inicio />
             </main>
 
