@@ -1,0 +1,12 @@
+{
+    "header":{
+        "about-me":"Inicio",
+        "technologies":"Tecnologías",
+        "projects":"Proyectos",
+        "contact":"Contacto"
+
+    },
+    "presentation":{
+        "specialty":"Desarrollador Frontend"
+    }
+}

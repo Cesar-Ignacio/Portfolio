@@ -1,0 +1,11 @@
+{
+    "header":{
+        "about-me":"Home",
+        "technologies":"technologies",
+        "projects":"Projects",
+        "contact":"Contact"
+    },
+    "presentation":{
+        "specialty":"Frontend developer"
+    }
+}

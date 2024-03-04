@@ -1,18 +1,15 @@
-import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
-import { IconButton, useDisclosure } from '@chakra-ui/react';
+
+import { IconButton, Tooltip, useDisclosure } from '@chakra-ui/react';
 import React, { useContext, useRef, useState } from 'react'
 import { SectionsContext } from '../context/SectionsContext';
+import { Drawer, DrawerBody, DrawerHeader, DrawerOverlay, DrawerContent, } from '@chakra-ui/react'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { useTranslation } from 'react-i18next';
 
-import {
-    Drawer,
-    DrawerBody,
-    DrawerHeader,
-    DrawerOverlay,
-    DrawerContent,
-    DrawerCloseButton,
-} from '@chakra-ui/react'
 
 const Header = () => {
+
+    const [t, i18n] = useTranslation("global")
 
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = useRef()
@@ -34,7 +31,6 @@ const Header = () => {
     }
 
 
-
     return (
         <div className='grid grid-cols-2 px-4 py-5 mx-auto xl:w-[70%]  ' >
             <div className=''>
@@ -44,9 +40,24 @@ const Header = () => {
                 <ul className='flex gap-5 items-center text-silver-950 dark:text-silver-200 text-[1rem] tracking-[1px]' >
                     {
                         listaSecciones.map((seccion, indice) => (
-                            <li key={indice} className='hidden sm:block'><a href="">{seccion.name}</a></li>
+                            <li key={indice} className='hidden sm:block'><a href="">{t("header." + seccion.name)}</a></li>
                         ))
                     }
+
+                    <li className='flex'>
+
+                        <Select onValueChange={(e) => i18n.changeLanguage(e)} >
+                            <Tooltip hasArrow label='Idioma' bg='gray.300' color='black'>
+                                <SelectTrigger  >
+                                    <SelectValue placeholder="ES" />
+                                </SelectTrigger>
+                            </Tooltip>
+                            <SelectContent >
+                                <SelectItem value="en">EN</SelectItem>
+                                <SelectItem value="es">ES</SelectItem>
+                            </SelectContent>
+                        </Select>
+                    </li>
                     <li className='transition-all duration-500 ease-in-out' onClick={cambiarTema}>
                         <IconButton colorScheme='transparent'>
                             {
@@ -63,6 +74,7 @@ const Header = () => {
                             }
                         </IconButton>
                     </li >
+
                     <li className='sm:hidden block'><IconButton colorScheme='transparent'
                         aria-label='Menu' ref={btnRef} onClick={onOpen}
                     >
@@ -71,6 +83,7 @@ const Header = () => {
                         </svg>
                     </IconButton>
                     </li>
+
 
                 </ul>
             </nav>
@@ -99,8 +112,8 @@ const Header = () => {
                     <DrawerBody className='bg-silver-200 dark:bg-[#1a2b2b] flex flex-col gap-3'>
                         {
                             listaSecciones.map((seccion, indece) => (
-                                <button key={indece}  className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#323c48,45%,#637b94,55%,#323c48)] bg-[length:200%_100%] px-6 font-medium text-silver-200 tracking-[1.5px] transition-colors ">
-                                    {seccion.name}
+                                <button key={indece} className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#323c48,45%,#637b94,55%,#323c48)] bg-[length:200%_100%] px-6 font-medium text-silver-200 tracking-[1.5px] transition-colors ">
+                                    {t("header." + seccion.name)}
                                 </button>
                             ))
                         }

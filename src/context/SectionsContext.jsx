@@ -7,17 +7,18 @@ const SectionsProvider = ({ children }) => {
 
     const listaSecciones = [
         {
-            name: 'Inicio'
+            name: 'about-me'
         },
         {
-            name: 'Técnologias'
+            name: 'technologies'
         },
         {
-            name: 'Proyectos'
+            name: 'projects'
         },
         {
-            name: 'Cantacto'
+            name: 'contact'
         }
+      
 
     ]
 

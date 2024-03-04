@@ -1,9 +1,15 @@
 
 import React from 'react'
-import { Avatar, Tooltip, WrapItem } from '@chakra-ui/react'
+import { Tooltip } from '@chakra-ui/react'
 import cv from '../../public/CV-CESAR-TELLO.pdf'
 import { Spotlight } from '../components/ui/Spotlight'
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { useTranslation } from 'react-i18next';
+
+
 const Inicio = () => {
+
+  const [t]=useTranslation("global")
 
   const handleClick = () => {
 
@@ -16,7 +22,7 @@ const Inicio = () => {
     <div className='grid sm:grid-cols-3  md:grid-cols-2  xl:w-[70%] mx-auto p-3 rounded-[2rem]  dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative gap-2 sm:gap-0'>
 
       {/* Efecto en pantalla */}
-      <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill='white' />
+      <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill='#088c96' />
 
       {/* Radial gradient for the container to give a faded look */}
       <div className=" transition-all duration-300 ease-linear absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-[#1a2b2b] bg-silver-200 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,#1a2b2b)]"></div>
@@ -26,13 +32,13 @@ const Inicio = () => {
         <div className='flex flex-col gap-2'>
           <h1 className='text-[1.5rem] font-bold bg-clip-text xl:dark:text-transparent bg-gradient-to-bl from-silver-100 to-silver-400 sm:text-[2rem] md:text-[3rem] xl:text-[4rem]'>César Aquino</h1>
           <div className='flex items-center'>
-            <strong className=' text-[1.4rem] text-fountain-blue-700 dark:text-fountain-blue-600 xl:text-[1.5rem] '> Desarrollador Frontend</strong>
-            <iframe className='w-[2.8rem] h-[2.8rem]'  title="GatitoProgramador" src="https://lottie.host/embed/dbb5c84b-7675-4da0-b8ae-820af9f17c24/GokBzvyzUc.json" ></iframe>
+            <strong className=' text-[1.4rem] text-fountain-blue-700 dark:text-fountain-blue-600 xl:text-[1.5rem] '>{t("presentation.specialty")}</strong>
+            <iframe className='w-[2.8rem] h-[2.8rem]' title="GatitoProgramador" src="https://lottie.host/embed/dbb5c84b-7675-4da0-b8ae-820af9f17c24/GokBzvyzUc.json" ></iframe>
           </div>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, voluptatem.</p>
         </div>
         {/* Redes */}
-        <div className=' flex mt-[2rem] justify-start xl:justify-evenly  gap-5'>
+        <div className=' flex mt-[2rem] justify-start gap-5'>
           <Tooltip hasArrow label='Github' bg='gray.300' color='black'>
             <a href="https://github.com/Cesar-Ignacio" target='_blank'>
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-github w-[2.3rem]" viewBox="0 0 16 16">
@@ -50,10 +56,11 @@ const Inicio = () => {
           </Tooltip>
 
           <Tooltip hasArrow label='Descargar CV' bg='gray.300' color='black'>
-            <a onClick={handleClick}>
+            <a href='' target='_blank' onClick={handleClick}>
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-cloud-download-fill w-[2.3rem]" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M8 0a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 4.095 0 5.555 0 7.318 0 9.366 1.708 11 3.781 11H7.5V5.5a.5.5 0 0 1 1 0V11h4.188C14.502 11 16 9.57 16 7.773c0-1.636-1.242-2.969-2.834-3.194C12.923 1.999 10.69 0 8 0m-.354 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V11h-1v3.293l-2.146-2.147a.5.5 0 0 0-.708.708z" />
               </svg>
+
             </a>
           </Tooltip>
         </div>
@@ -61,9 +68,11 @@ const Inicio = () => {
       </div>
 
       {/* Avatar */}
-      <div className='flex  items-center justify-self-start row-start-1  sm:col-start-3 sm:col-end-4  md:col-start-2 md:col-end-3 sm:justify-self-center ' >     
-          
-          <Avatar size={'2xl'} style={{ borderColor: '#088c96' }} className='dark:drop-shadow-[2px_2px_20px_#088c96] border-[3px] border-solid' name='Cesar Aquino' src='https://i.postimg.cc/V6TM1YdP/1696083335092-1696083236598-0-20230930-110807-Noise-Remove-x1-Photo-Room.png' />
+      <div className='flex  items-center justify-self-start row-start-1  sm:col-start-3 sm:col-end-4  md:col-start-2 md:col-end-3 sm:justify-self-center ' >
+        <Avatar className='border-[3px] border-white   shadow-shark-900 dark:shadow-fountain-blue-300  shadow-[0px_0px_10px]  w-[8rem] h-[8rem] sm:w-[12rem] sm:h-[12rem] lg:w-[16rem] lg:h-[16rem] '>
+          <AvatarImage src="https://i.postimg.cc/V6TM1YdP/1696083335092-1696083236598-0-20230930-110807-Noise-Remove-x1-Photo-Room.png" className='object-cover'/>
+          <AvatarFallback>CN</AvatarFallback>
+        </Avatar>
       </div>
 
     </div>
