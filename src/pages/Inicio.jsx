@@ -70,9 +70,11 @@ const Inicio = () => {
       {/* Avatar */}
       <div className='flex  items-center justify-self-start row-start-1  sm:col-start-3 sm:col-end-4  md:col-start-2 md:col-end-3 sm:justify-self-center ' >
         <Avatar className='border-[3px] border-white   shadow-shark-900 dark:shadow-fountain-blue-300  shadow-[0px_0px_10px]  w-[8rem] h-[8rem] sm:w-[12rem] sm:h-[12rem] lg:w-[16rem] lg:h-[16rem] '>
-          <AvatarImage src="https://i.postimg.cc/V6TM1YdP/1696083335092-1696083236598-0-20230930-110807-Noise-Remove-x1-Photo-Room.png" className='object-cover'/>
+          <AvatarImage src="https://res.cloudinary.com/drutrk0me/image/upload/f_auto,q_auto/dyqgg9j9ufpe8iuualyj
+" className='object-cover'/>
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
+       
       </div>
 
     </div>
