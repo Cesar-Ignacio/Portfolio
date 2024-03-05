@@ -3,6 +3,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 import Header from './components/Header'
 import Inicio from './pages/Inicio'
 import { SectionsProvider } from './context/SectionsContext';
+import Tecnologias from './pages/Tecnologias';
 
 function App() {
 
@@ -13,12 +14,13 @@ function App() {
     <>
       <ChakraProvider>
         <SectionsProvider>
-          <div className='container  mx-auto px-3'>
-            <header className='container py-5  sm:px-0 bg-opacity-40  backdrop-filter backdrop-blur-2xl sticky top-0 z-50  ' >
+          <div className='container  mx-auto'>
+            <header className='container py-5 px-3  bg-opacity-40  backdrop-filter backdrop-blur-2xl sticky top-0 z-50  ' >
               <Header />
             </header>
-            <main className=' container mx-auto mt-[1rem] lg:mt-[5rem]'>
+            <main className=' container mx-auto px-3 flex flex-col gap-[2rem] mt-[1.5rem] sm:mt-0 '>
               <Inicio />
+              <Tecnologias/>
             </main>
 
           </div>
