@@ -2,9 +2,12 @@ import React from 'react'
 
 const Tecnologias = () => {
   return (
-    <div className='xl:w-[70%] sm:h-[80vh] mx-auto '>
-          <h2 className='text-[1.5rem] text-silver-950 font-bold bg-clip-text xl:dark:text-transparent bg-gradient-to-bl from-silver-100 to-silver-400 sm:text-[2rem] md:text-[2.8rem]'>Tecnologías</h2>
-     
+    <div className="xl:w-[70%] mx-auto  rounded-[2rem] dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative] relative ">
+      {/* Radial gradient for the container to give a faded look */}
+      <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-firefly-950 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+      <p className="text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8">
+        Backgrounds
+      </p>
     </div>
   )
 }
