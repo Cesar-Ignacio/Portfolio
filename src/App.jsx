@@ -19,10 +19,9 @@ function App() {
               <Header />
             </header>
             <main className=' container mx-auto px-3 flex flex-col gap-[2rem] mt-[1.5rem] sm:mt-0 '>
-              <Inicio />
-              <Tecnologias/>
+                <Inicio />
+                <Tecnologias />             
             </main>
-
           </div>
         </SectionsProvider>
       </ChakraProvider>

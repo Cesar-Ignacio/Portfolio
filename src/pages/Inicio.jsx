@@ -6,10 +6,9 @@ import { Spotlight } from '../components/ui/Spotlight'
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { useTranslation } from 'react-i18next';
 
-
 const Inicio = () => {
 
-  const [t]=useTranslation("global")
+  const [t] = useTranslation("global")
 
   const handleClick = () => {
 
@@ -19,7 +18,8 @@ const Inicio = () => {
 
 
   return (
-    <div className='grid sm:grid-cols-3 md:grid-cols-2  mx-auto rounded-[2rem] dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative gap-2 sm:gap-0  xl:w-[70%] sm:h-[80vh] 2xl:h-auto '>
+    <div className=' grid sm:grid-cols-3 md:grid-cols-2  mx-auto rounded-[2rem] dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative gap-2 sm:gap-0  xl:w-[70%] sm:h-[80vh] 2xl:h-auto '>
+
 
       {/* Efecto en pantalla */}
       <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill='#088c96' />
@@ -69,12 +69,12 @@ const Inicio = () => {
 
       {/* Avatar */}
       <div className='flex  items-center justify-self-start row-start-1  sm:col-start-3 sm:col-end-4  md:col-start-2 md:col-end-3 sm:justify-self-center ' >
-        <Avatar className='border-[3px] border-white   shadow-shark-900 dark:shadow-fountain-blue-300  shadow-[0px_0px_10px]  w-[8rem] h-[8rem] sm:w-[12rem] sm:h-[12rem] lg:w-[16rem] lg:h-[16rem] '>
+        <Avatar className='border-[3px] border-white   shadow-shark-900 dark:shadow-fountain-blue-300  shadow-[0px_0px_10px]  w-[8rem] h-[8rem] sm:w-[12rem] sm:h-[12rem] lg:w-[20rem] lg:h-[20rem] z-20 '>
           <AvatarImage src="https://res.cloudinary.com/drutrk0me/image/upload/f_auto,q_auto/dyqgg9j9ufpe8iuualyj
-" className='object-cover'/>
+" className='object-cover' />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
-       
+
       </div>
 
     </div>
