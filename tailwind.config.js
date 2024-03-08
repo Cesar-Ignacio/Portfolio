@@ -24,7 +24,9 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         spotlight: "spotlight 2s ease .75s 1 forwards",
-        shimmer: "shimmer 5s linear .50s infinite"
+        shimmer: "shimmer 5s linear .50s infinite",
+        scroll:
+        "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
       keyframes: {
         "accordion-down": {
@@ -52,7 +54,12 @@ module.exports = {
           to: {
             "backgroundPosition": "-200% 0"
           }
-        }
+        },
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
       },
     
       colors: {
@@ -174,4 +181,5 @@ function addVariablesForColors({ addBase, theme }) {
   addBase({
     ":root": newVars,
   });
+  
 }
