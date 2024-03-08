@@ -11,7 +11,8 @@ const Tecnologias = () => {
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, qui!</p>  
 
       </div>
-      <div className=' grid grid-cols-5 gap-1 p-3'>
+      <div className=' grid grid-cols-5 gap-1 p-3
+      '>
         <div className=' justify-self-center rounded-lg overflow-hidden'>
           <img src={js} alt="icon" className=' ' />
         </div>
