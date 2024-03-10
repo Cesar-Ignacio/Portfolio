@@ -88,7 +88,7 @@ export const InfiniteMovingCards = ({
                 )}
             >
                 {items.map((item) => (
-                    <li className=" relative rounded-2xl flex-shrink-0 w-[450px] p-4 bg-firefly-700 bg-opacity-30 shadow-[0px_0px_10px_0px] shadow-silver-50 backdrop-filter backdrop-blur-[0px]" key={item.id}>
+                    <li className=" relative rounded-2xl flex-shrink-0 w-[450px] p-4 bg-firefly-700 bg-opacity-30 shadow-[0px_0px_0px_0px] shadow-silver-50 backdrop-filter backdrop-blur-[0px]" key={item.id}>
                         <a href={item.link} target="_blank">
                             <blockquote>
                                 <div aria-hidden="true"className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]">
