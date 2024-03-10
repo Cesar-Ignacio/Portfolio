@@ -11,10 +11,11 @@ export const InfiniteMovingCards = ({
     className,
 }: {
     items: {
-        quote: string;
-        name: string;
-        title: string;
+        id: string;
+        nombre:string;
+        descripcion: string;
         url: string;
+        link:string;
     }[];
     direction?: "left" | "right";
     speed?: "fast" | "normal" | "slow";
@@ -87,34 +88,21 @@ export const InfiniteMovingCards = ({
                 )}
             >
                 {items.map((item) => (
-                    <li className=" relative rounded-2xl flex-shrink-0 w-[450px] p-4 bg-firefly-700 bg-opacity-30 shadow-lg backdrop-filter backdrop-blur-[0px]" key={item.name}>
-                        <a href="">
+                    <li className=" relative rounded-2xl flex-shrink-0 w-[450px] p-4 bg-firefly-700 bg-opacity-30 shadow-[0px_0px_10px_0px] shadow-silver-50 backdrop-filter backdrop-blur-[0px]" key={item.id}>
+                        <a href={item.link} target="_blank">
                             <blockquote>
-                                <div
-                                    aria-hidden="true"
-                                    className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
-                                ></div>
-                                <div className="flex gap-2 items-start  justify-center">
-                                    <div className="w-[5rem] rounded-[50%] overflow-hidden mt-2">
-                                        <img src={item.url} alt="imgIcon" className="w-[100%] h-[100%] object-cover" />
+                                <div aria-hidden="true"className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]">
+                                </div>
+                                <div className="flex gap-2 items-center  justify-center">
+                                    <div className="w-[15%]">
+                                        <img src={item.url} alt="imgIcon" className="w-[100%] h-[100%] object-fill" />
                                     </div>
-                                    <div className="flex flex-col text-silver-100 dark:text-silver-200">
-                                        <strong >NombreApp</strong>
-                                        <span className=" relative z-20 text-sm ">
-                                            {item.quote}
-                                            {/* <img src={item.url} alt="img" className="" /> */}
-                                        </span>
+                                    <div className=" w-[85%] flex flex-col text-silver-100 dark:text-silver-200">
+                                        <strong >{item.nombre}</strong>
+                                        <p className=" relative z-20 text-sm  line-clamp-2 " >
+                                            {item.descripcion}
+                                        </p>
                                     </div>
-                                    {/* <div className="relative z-20 mt-6 flex flex-row items-center">
-                                    <span className="flex flex-col gap-1">
-                                        <span className=" text-sm leading-[1.6] text-gray-400 font-normal">
-                                            {item.name}
-                                        </span>
-                                        <span className=" text-sm leading-[1.6] text-gray-400 font-normal">
-                                            {item.title}
-                                        </span>
-                                    </span>
-                                </div> */}
                                 </div>
                             </blockquote>
                         </a>
