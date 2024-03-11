@@ -38,11 +38,11 @@ const Header = () => {
                 <span className='font-righteous text-[2rem] text-silver-900 dark:text-silver-200 '>Ces<span className='text-[2rem] text-fountain-blue-700 dark:text-fountain-blue-600 '>Dev.</span></span>
             </div>
             {/* Navegador */}
-            <nav className='justify-self-end self-center font-bold  '>
-                <ul className='flex gap-5 items-center text-silver-950 dark:text-silver-200 text-[1rem] tracking-[1px]' >
+            <nav className='justify-self-end self-center '>
+                <ul className='flex gap-5 items-center text-silver-950 dark:text-silver-200 text-[1rem]' >
                     {
                         listaSecciones.map((seccion, indice) => (
-                            <li key={indice} className='hidden sm:block'><a href={"#" + seccion.id}>{t("header." + seccion.name)}</a></li>
+                            <li key={indice} className='hidden sm:block '><a href={"#" + seccion.id}>{t("header." + seccion.name)}</a></li>
                         ))
                     }
 

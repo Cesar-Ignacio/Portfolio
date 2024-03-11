@@ -145,7 +145,7 @@ module.exports = {
       },
 
       fontFamily:{
-        righteous:['Righteous'],
+        'righteous':['Righteous'],
         'plus-jakarta-sans': ['"Plus Jakarta Sans"', 'sans-serif'],
         'josefin-sans': ['"Josefin Sans"', 'sans-serif']
       }
