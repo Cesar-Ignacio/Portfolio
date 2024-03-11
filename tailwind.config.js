@@ -1,6 +1,8 @@
 const svgToDataUri = require("mini-svg-data-uri");
 
 const colors = require("tailwindcss/colors");
+
+
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
@@ -146,8 +148,7 @@ module.exports = {
 
       fontFamily:{
         'righteous':['Righteous'],
-        'plus-jakarta-sans': ['"Plus Jakarta Sans"', 'sans-serif'],
-        'josefin-sans': ['"Josefin Sans"', 'sans-serif']
+        'onest':["Onest Variable",'sans-serif']
       }
 
     },
