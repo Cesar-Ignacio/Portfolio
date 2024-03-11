@@ -35,7 +35,7 @@ const Header = () => {
         <div className='grid grid-cols-2  mx-auto xl:w-[70%]  ' >
             {/* Logo */}
             <div className='flex items-center'>
-                <strong className=' text-[2rem] text-silver-900 dark:text-silver-200'>Ces<span className='text-[2rem] text-fountain-blue-700 dark:text-fountain-blue-600 '>Dev.</span></strong>
+                <span className='font-righteous text-[2rem] text-silver-900 dark:text-silver-200 '>Ces<span className='text-[2rem] text-fountain-blue-700 dark:text-fountain-blue-600 '>Dev.</span></span>
             </div>
             {/* Navegador */}
             <nav className='justify-self-end self-center font-bold  '>
