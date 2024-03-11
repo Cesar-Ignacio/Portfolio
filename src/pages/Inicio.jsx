@@ -29,10 +29,10 @@ const Inicio = () => {
 
       {/* Presentacion */}
       <div className='justify-self-center self-center text-silver-950 dark:text-silver-100 tracking-[1px] relative z-20  sm:col-start-1 sm:col-end-3 md:col-start-1 md:col-end-2 '>
-        <div className='flex flex-col gap-2'>
-          <h1 className='text-[1.5rem] font-bold bg-clip-text xl:dark:text-transparent bg-gradient-to-bl from-silver-100 to-silver-400 sm:text-[2rem] md:text-[3rem] xl:text-[4rem]'>César Aquino</h1>
-          <div className='flex items-center'>
-            <strong className=' text-[1.4rem] text-fountain-blue-700 dark:text-fountain-blue-600 xl:text-[1.5rem] '>{t("presentation.specialty")}</strong>
+        <div className='flex flex-col gap-2 '>
+          <h1 className='text-[1.9rem] sm:text-[2.2rem] md:text-[3.4rem] xl:text-[4rem] text-center sm:text-start font-bold bg-clip-text xl:dark:text-transparent bg-gradient-to-bl from-silver-100 to-silver-400  '>César Aquino</h1>
+          <div className='flex items-center '>
+            <h2 className='text-[1.7rem] sm:text-[1.9rem] font-bold  text-fountain-blue-700 dark:text-fountain-blue-600 '>{t("presentation.specialty")}</h2>
             <iframe className='w-[2.8rem] h-[2.8rem]' title="GatitoProgramador" src="https://lottie.host/embed/dbb5c84b-7675-4da0-b8ae-820af9f17c24/GokBzvyzUc.json" ></iframe>
           </div>
           <p>{t("presentation.summary")}</p>
@@ -68,11 +68,11 @@ const Inicio = () => {
       </div>
 
       {/* Avatar */}
-      <div className='flex  items-center justify-self-start row-start-1  sm:col-start-3 sm:col-end-4  md:col-start-2 md:col-end-3 sm:justify-self-center ' >
-        <Avatar className='border-[3px] border-white   shadow-shark-900 dark:shadow-fountain-blue-300  shadow-[0px_0px_10px]  w-[8rem] h-[8rem] sm:w-[12rem] sm:h-[12rem] lg:w-[20rem] lg:h-[20rem] z-20 '>
+      <div className='flex  items-center justify-self-center row-start-1  sm:col-start-3 sm:col-end-4  md:col-start-2 md:col-end-3' >
+        <Avatar className='border-[3px] border-white   shadow-shark-900 dark:shadow-fountain-blue-300  shadow-[0px_0px_10px]  w-[12rem] h-[12rem] lg:w-[20rem] lg:h-[20rem] z-20 '>
           <AvatarImage src="https://res.cloudinary.com/drutrk0me/image/upload/f_auto,q_auto/dyqgg9j9ufpe8iuualyj
 " className='object-cover' />
-          <AvatarFallback>CN</AvatarFallback>
+          <AvatarFallback>CA</AvatarFallback>
         </Avatar>
 
       </div>
