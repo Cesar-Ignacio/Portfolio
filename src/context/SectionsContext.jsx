@@ -8,7 +8,7 @@ const SectionsProvider = ({ children }) => {
     const listaSecciones = [
         {
             name: 'about-me',
-            id:''
+            id:'home'
         },
         {
             name: 'technologies',

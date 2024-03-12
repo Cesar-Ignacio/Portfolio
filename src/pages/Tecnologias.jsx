@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import react from '../assets/react.svg'
 import { InfiniteMovingCards } from '../components/ui/infinite-moving-cards'
 import db from '../db/db';
 import { collection, getDocs } from 'firebase/firestore';
@@ -35,7 +34,7 @@ const Tecnologias = () => {
       {/* Radial gradient for the container to give a faded look */}
       <div className=" transition-all duration-300 ease-linear absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-[#1a2b2b] bg-silver-200 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,#1a2b2b)]"></div>
       {/* SubTitulo y descripción */}
-      <div className='md:text-center  text-silver-950 dark:text-silver-100 tracking-[1px] relative z-20 '>
+      <div className='text-silver-950 dark:text-silver-100 tracking-[1px] relative z-20 '>
         <h2 className='text-[2rem] md:text-[2.5rem] font-bold bg-clip-text xl:dark:text-transparent bg-gradient-to-bl from-silver-100 to-silver-400' >Tecnologías</h2>
         <p>En esta sección, te presento las tecnologías que utilizo como programador. Además, compartiré algunos recursos útiles que pueden servirte</p>
 

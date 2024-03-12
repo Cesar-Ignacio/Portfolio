@@ -42,7 +42,7 @@ const Header = () => {
                 <ul className='flex gap-5 items-center text-silver-950 dark:text-silver-200 text-[1rem]' >
                     {
                         listaSecciones.map((seccion, indice) => (
-                            <li key={indice} className='hidden sm:block '><a href={"#" + seccion.id}>{t("header." + seccion.name)}</a></li>
+                            <li key={indice} className='hidden sm:block '><a href={`#${seccion.id}`}>{t(`header.${seccion.name}`)}</a></li>
                         ))
                     }
 
@@ -53,8 +53,8 @@ const Header = () => {
                                 <SelectValue placeholder="ES" />
                             </SelectTrigger>
                             <SelectContent >
-                                <SelectItem value="en">EN</SelectItem>
                                 <SelectItem value="es">ES</SelectItem>
+                                <SelectItem value="en">EN</SelectItem>
                             </SelectContent>
                         </Select>
                     </li>

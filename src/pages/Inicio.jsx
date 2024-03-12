@@ -18,7 +18,7 @@ const Inicio = () => {
 
 
   return (
-    <div className=' grid sm:grid-cols-3 md:grid-cols-2  mx-auto rounded-[2rem] dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative gap-2 sm:gap-0  xl:w-[70%] sm:h-[80vh] 2xl:h-auto '>
+    <div id='home'  className='scroll-mt-[6rem] grid sm:grid-cols-3 md:grid-cols-2  mx-auto rounded-[2rem] dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative gap-2 sm:gap-0  xl:w-[70%] sm:h-[80vh] 2xl:h-auto '>
 
 
       {/* Efecto en pantalla */}
