@@ -1,16 +1,17 @@
 
 import { IconButton } from '@chakra-ui/react';
-import React, { useContext, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import { SectionsContext } from '../context/SectionsContext';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { useTranslation } from 'react-i18next';
 import MenuDesplegable from './MenuDesplegable';
-
+import { openMenu, closeMenu } from '../lib/utils'
 
 const Header = () => {
 
-
     const refer = useRef();
+
+    const [menu, setMenu] = useState(true);
 
     const [t, i18n] = useTranslation("global")
 
@@ -29,6 +30,9 @@ const Header = () => {
 
     }
 
+    const actulizarEstadoMenu=()=>{
+        setMenu(!menu);
+    }
 
     return (
         <div className='grid grid-cols-2  mx-auto xl:w-[70%]  ' >
@@ -76,24 +80,29 @@ const Header = () => {
                     </li >
                     {/* Menu */}
                     <li className='sm:hidden block'>
-                        <IconButton colorScheme='transparent' aria-label='Menu' onClick={() => {
-                            refer.current.classList.remove('w-0')
-                            refer.current.classList.remove('h-[0vh]')
-
-
-                            refer.current.className += " w-full  "
-                            refer.current.className += " h-[90vh]"
-                        
-
-                        }} >
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-list w-[2.5rem] dark:text-silver-400 text-silver-800 " viewBox="0 0 16 16">
+                       {
+                        (menu)?
+                        (
+                        <IconButton colorScheme='transparent' aria-label='Menu' onClick={() => { openMenu(refer), setMenu(!menu) }} >
+                           
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-list w-[2.5rem]  dark:text-silver-400 text-silver-800 transition-all duration-200 ease-linear " viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
                             </svg>
                         </IconButton>
+                        ):
+                        (
+                        <IconButton colorScheme='transparent' aria-label='Menu' onClick={() => {closeMenu(refer), setMenu(!menu)}} >
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-x-lg transition-all duration-200 ease-linear w-[2.2rem] dark:text-silver-400 text-silver-800" viewBox="0 0 16 16">
+                                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                            </svg>
+                        </IconButton>
+                        )
+                       } 
                     </li>
+
                 </ul>
             </nav>
-            <MenuDesplegable className='bg-red-50 ' refer={refer} />
+            <MenuDesplegable className=' ' refer={refer} actulizarEstadoMenu={actulizarEstadoMenu} />
         </div >
     )
 }
