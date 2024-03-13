@@ -1,21 +1,20 @@
 
-import { IconButton, useDisclosure } from '@chakra-ui/react';
+import { IconButton } from '@chakra-ui/react';
 import React, { useContext, useRef, useState } from 'react'
 import { SectionsContext } from '../context/SectionsContext';
-import { Drawer, DrawerBody, DrawerHeader, DrawerOverlay, DrawerContent, } from '@chakra-ui/react'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { useTranslation } from 'react-i18next';
+import MenuDesplegable from './MenuDesplegable';
 
 
 const Header = () => {
 
+
+    const refer = useRef();
+
     const [t, i18n] = useTranslation("global")
 
-    const { isOpen, onOpen, onClose } = useDisclosure()
-    const btnRef = useRef()
     const [iconTheme, setIconTheme] = useState(localStorage.getItem("theme") || (localStorage.setItem("theme", "light"), "light"));
-
-
     const { listaSecciones } = useContext(SectionsContext);
 
     const cambiarTema = () => {
@@ -46,8 +45,8 @@ const Header = () => {
                         ))
                     }
 
+                    {/* IDIOMA */}
                     <li className='flex'>
-
                         <Select onValueChange={(e) => i18n.changeLanguage(e)} >
                             <SelectTrigger  >
                                 <SelectValue placeholder="ES" />
@@ -58,6 +57,7 @@ const Header = () => {
                             </SelectContent>
                         </Select>
                     </li>
+                    {/* Tema */}
                     <li className='transition-all duration-500 ease-in-out' onClick={cambiarTema}>
                         <IconButton colorScheme='transparent'>
                             {
@@ -74,55 +74,26 @@ const Header = () => {
                             }
                         </IconButton>
                     </li >
-
-                    <li className='sm:hidden block'><IconButton colorScheme='transparent'
-                        aria-label='Menu' ref={btnRef} onClick={onOpen}
-                    >
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-list w-[2.5rem] dark:text-silver-400 text-silver-800 " viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-                        </svg>
-                    </IconButton>
-                    </li>
+                    {/* Menu */}
+                    <li className='sm:hidden block'>
+                        <IconButton colorScheme='transparent' aria-label='Menu' onClick={() => {
+                            refer.current.classList.remove('w-0')
+                            refer.current.classList.remove('h-[0vh]')
 
 
-                </ul>
-            </nav>
+                            refer.current.className += " w-full  "
+                            refer.current.className += " h-[90vh]"
+                        
 
-            <Drawer
-                isOpen={isOpen}
-                placement='right'
-                onClose={onClose}
-                finalFocusRef={btnRef}
-                size={'full'}
-
-            >
-                <DrawerOverlay />
-                <DrawerContent  >
-
-                    <DrawerHeader className='bg-silver-200 dark:bg-[#1a2b2b] flex justify-between ' >
-                        <strong className=' text-[2rem] text-silver-900 dark:text-silver-200'>Ces<span className='text-[2rem] text-fountain-blue-700 dark:text-fountain-blue-600 '>Dev.</span></strong>
-
-                        <IconButton aria-label='Search database' onClick={onClose} colorScheme='transparent' >
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-x-lg w-[2rem] dark:text-silver-200 text-silver-950 " viewBox="0 0 16 16">
-                                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                        }} >
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-list w-[2.5rem] dark:text-silver-400 text-silver-800 " viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
                             </svg>
                         </IconButton>
-                    </DrawerHeader>
-
-                    <DrawerBody className='bg-silver-200 dark:bg-[#1a2b2b] flex flex-col gap-3'>
-                        {
-                            listaSecciones.map((seccion, indece) => (
-                                <button key={indece} className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#323c48,45%,#637b94,55%,#323c48)] bg-[length:200%_100%] px-6 font-medium text-silver-200 tracking-[1.5px] transition-colors ">
-                                    {t("header." + seccion.name)}
-                                </button>
-                            ))
-                        }
-
-                    </DrawerBody>
-
-                </DrawerContent>
-            </Drawer>
-
+                    </li>
+                </ul>
+            </nav>
+            <MenuDesplegable className='bg-red-50 ' refer={refer} />
         </div >
     )
 }
