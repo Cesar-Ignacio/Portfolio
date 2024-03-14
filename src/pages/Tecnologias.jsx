@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { InfiniteMovingCards } from '../components/ui/infinite-moving-cards'
+import { InfiniteMovingCards } from '../components/ui/infinite-moving-cards/infinite-moving-cards'
 import db from '../db/db';
 import { collection, getDocs } from 'firebase/firestore';
 const Tecnologias = () => {
