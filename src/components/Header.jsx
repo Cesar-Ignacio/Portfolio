@@ -102,7 +102,7 @@ const Header = () => {
 
                 </ul>
             </nav>
-            <MenuDesplegable className=' ' refer={refer} actulizarEstadoMenu={actulizarEstadoMenu} />
+            <MenuDesplegable className='' refer={refer} actulizarEstadoMenu={actulizarEstadoMenu} />
         </div >
     )
 }
