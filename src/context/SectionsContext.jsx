@@ -11,12 +11,12 @@ const SectionsProvider = ({ children }) => {
             id:'home'
         },
         {
-            name: 'technologies',
-            id:'tec'
-        },
-        {
             name: 'projects',
             id:'pro'
+        },
+        {
+            name: 'technologies',
+            id:'tec'
         },
         {
             name: 'contact',
