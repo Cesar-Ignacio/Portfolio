@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { cn } from '../../lib/utils'
+import { cn } from '@/lib/utils'
 import { useTranslation } from 'react-i18next';
 type Tab = {
   name: string;
@@ -21,6 +21,10 @@ export const Tabs = ({
   tabClassName?: string;
   contentClassName?: string;
 }) => {
+
+
+
+
   const [active, setActive] = useState<Tab>(propTabs[0]);
   const [tabs, setTabs] = useState<Tab[]>(propTabs);
 
@@ -38,18 +42,9 @@ export const Tabs = ({
 
   return (
     <>
-      <div
-        className={cn(
-          "flex flex-row invisible md:visible ",
-          containerClassName
-        )}
-      >
+      <div className={cn("flex flex-row invisible md:visible ", containerClassName)}>
         {propTabs.map((tab, idx) => (
-          <a href={`#${tab.id}`}          
-            key={tab.name}
-            onClick={() => {
-              moveSelectedTabToTop(idx);
-            }}
+          <a href={`#${tab.id}`} key={tab.name} onClick={() => { moveSelectedTabToTop(idx); }}
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
             className={cn("relative px-4 py-1 rounded-full", tabClassName)}
@@ -64,13 +59,13 @@ export const Tabs = ({
                 className={cn(
                   "absolute inset-0 dark:bg-fountain-blue-600 bg-silver-300 rounded-full ",
                   activeTabClassName,
-                
+
                 )}
               />
             )}
 
             <span className="relative block dark:text-silver-100 ">
-            {t(`header.${tab.name}`)}
+              {t(`header.${tab.name}`)}
             </span>
           </a>
         ))}
@@ -97,10 +92,10 @@ export const FadeInDiv = ({
   active: Tab;
   hovering?: boolean;
 }) => {
-  
-  
-  
-  
+
+
+
+
   const isActive = (tab: Tab) => {
     return tab.id === tabs[0].id;
   };

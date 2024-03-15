@@ -26,7 +26,7 @@ const Inicio = () => {
       {/* Presentacion */}
       <div className='justify-self-center self-center text-silver-950 dark:text-silver-100 tracking-[1px] relative z-20  sm:col-start-1 sm:col-end-3 md:col-start-1 md:col-end-2  flex flex-col gap-5'>
         <div className='flex flex-col '>
-          <h1 className='text-[2.3rem] sm:text-[2.5rem] lg:text-[3.5rem] text-center sm:text-start bg-clip-text xl:dark:text-transparent bg-gradient-to-bl from-silver-100 to-silver-400 font-bold '>César Aquino</h1>
+          <h1 className='titulo text-[2.3rem] sm:text-[2.5rem] lg:text-[3.5rem] text-center sm:text-start bg-clip-text xl:dark:text-transparent bg-gradient-to-bl from-silver-100 to-silver-400 font-bold '>César Aquino</h1>
           <div className='flex items-center '>
             <h2 className='text-[1.5rem] pt-1  text-fountain-blue-700 dark:text-fountain-blue-600 '>{t("presentation.specialty")}</h2>
             <iframe className='w-[2.8rem] h-[2.8rem]' title="GatitoProgramador" src="https://lottie.host/embed/dbb5c84b-7675-4da0-b8ae-820af9f17c24/GokBzvyzUc.json" ></iframe>
