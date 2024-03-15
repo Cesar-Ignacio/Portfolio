@@ -2,30 +2,26 @@ import React, { useEffect, useState } from 'react'
 import { InfiniteMovingCards } from '../components/ui/infinite-moving-cards/infinite-moving-cards'
 import db from '../db/db';
 import { collection, getDocs } from 'firebase/firestore';
+import { useTranslation } from 'react-i18next';
 const Tecnologias = () => {
 
-
-  const [datos, setDatos] = useState();
   const [listTecFront, setListTecFront] = useState();
   const [listTecBack, setListTecBack] = useState();
   const [listTecRec, setListTecRec] = useState();
 
+  const [t]=useTranslation("global")
+  
   useEffect(() => {
-
     const q = collection(db, "tecnologias");
-
     getDocs(q).then(({ docs }) => {
       const nuevoArray = docs.map(doc => {
         return { id: doc.id, ...doc.data() }
       })
-
-      setDatos(nuevoArray);
+      
       setListTecFront(nuevoArray.filter(doc => doc.tema === "frontend"))
       setListTecBack(nuevoArray.filter(doc => doc.tema === "backend"))
       setListTecRec(nuevoArray.filter(doc => doc.tema === "recurso"))
     })
-
-
   }, [])
 
 
@@ -35,9 +31,8 @@ const Tecnologias = () => {
       <div className=" transition-all duration-300 ease-linear absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-[#1a2b2b] bg-silver-200 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,#1a2b2b)]"></div>
       {/* SubTitulo y descripción */}
       <div className='text-silver-950 dark:text-silver-100 tracking-[1px] relative z-20 '>
-        <h2 className='text-[2rem] md:text-[2.5rem] font-bold bg-clip-text xl:dark:text-transparent bg-gradient-to-bl from-silver-100 to-silver-400' >Tecnologías</h2>
-        <p>En esta sección, te presento las tecnologías que utilizo como programador. Además, compartiré algunos recursos útiles que pueden servirte</p>
-
+        <h2 className='text-[2rem] md:text-[2.5rem] font-bold bg-clip-text xl:dark:text-transparent bg-gradient-to-bl from-silver-100 to-silver-400' >{t("technologies.title")}</h2>
+        <p>{t("technologies.description")}</p>
       </div>
       {/* Contenido de tec */}
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4 w-[100%] mt-4'>
@@ -48,7 +43,7 @@ const Tecnologias = () => {
           </div>
           <div className="rounded-md flex flex-col antialiased  items-center justify-center relative overflow-hidden">
             {
-              datos && (
+              listTecFront && (
                 <InfiniteMovingCards
                   items={listTecFront}
                   direction="left"
@@ -62,14 +57,13 @@ const Tecnologias = () => {
             <path d="M7 16.5C7 15.5654 7 15.0981 7.20096 14.75C7.33261 14.522 7.52197 14.3326 7.75 14.201C8.09808 14 8.56538 14 9.5 14H15.5C16.4346 14 16.9019 14 17.25 14.201C17.478 14.3326 17.6674 14.522 17.799 14.75C18 15.0981 18 15.5654 18 16.5C18 17.4346 18 17.9019 17.799 18.25C17.6674 18.478 17.478 18.6674 17.25 18.799C16.9019 19 16.4346 19 15.5 19H9.5C8.56538 19 8.09808 19 7.75 18.799C7.52197 18.6674 7.33261 18.478 7.20096 18.25C7 17.9019 7 17.4346 7 16.5Z" stroke-width="1.5" />
             <path d="M3 14L3 2M3 22L3 18" stroke="" stroke-width="1.5" stroke-linecap="round" />
           </svg>
-
         </div>
         {/* BACKEND */}
         <div className='bg-firefly-800 bg-opacity-30 shadow-lg backdrop-filter backdrop-blur-[0px]  rounded-2xl z-20 p-4 relative overflow-hidden '>
           <strong className='text-fountain-blue-700 dark:text-fountain-blue-600 text-[1.2rem] tracking-wider'>BackEnd</strong>
           <div className="rounded-md flex flex-col antialiased  items-center justify-center relative overflow-hidden">
             {
-              datos && (
+              listTecBack && (
                 <InfiniteMovingCards
                   items={listTecBack}
                   direction="right"
@@ -89,7 +83,7 @@ const Tecnologias = () => {
           <strong className='text-fountain-blue-700 dark:text-fountain-blue-600 text-[1.2rem] tracking-wide'>Recursos</strong>
           <div className="rounded-md flex flex-col antialiased  items-center justify-center relative overflow-hidden">
             {
-              datos && (
+              listTecRec && (
                 <InfiniteMovingCards
                   items={listTecRec}
                   direction="left"

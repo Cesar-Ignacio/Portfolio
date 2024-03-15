@@ -1,12 +1,16 @@
 {
-    "header":{
-        "about-me":"Home",
-        "technologies":"Technologies",
-        "projects":"Projects",
-        "contact":"Contact"
+    "header": {
+        "about-me": "Home",
+        "technologies": "Technologies",
+        "projects": "Projects",
+        "contact": "Contact"
     },
-    "presentation":{
-        "specialty":"FrontEnd developer",
-        "summary":"Welcome to my portfolio! I am a graduate programmer from the UTN FRGP in  Argentina. Currently, I am exploring this vast world and learning to one day contribute my bit to the community "
+    "presentation": {
+        "specialty": "FrontEnd developer",
+        "summary": "Welcome to my portfolio! I am a graduate programmer from the UTN FRGP in  Argentina. Currently, I am exploring this vast world and learning to one day contribute my bit to the community "
+    },
+    "technologies": {
+        "title": "Technologies",
+        "description": "In this section, I present the technologies I use as a programmer. Additionally, I will share some useful resources that may be helpful to you."
     }
 }

@@ -14,7 +14,7 @@ function App() {
     <>
       <ChakraProvider>
         <SectionsProvider>
-          <div className='container  mx-auto'>
+          <div className='container  mx-auto font-onest'>
             <header className='container py-5 px-3  bg-opacity-40  backdrop-filter backdrop-blur-2xl sticky top-0 z-50  ' >
               <Header />
             </header>

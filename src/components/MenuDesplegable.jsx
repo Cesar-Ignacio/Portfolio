@@ -11,7 +11,7 @@ const MenuDesplegable = ({ className: styleProps, refer, actulizarEstadoMenu }) 
 
     return (
         <>
-            <div ref={refer} className={styleProps + 'absolute top-20 bg-silver-200 dark:bg-[#1a2b2b]  right-0 w-0 h-[0vh] overflow-hidden sm:hidden z-50 transition-all duration-400 ease-linear flex justify-center '} >
+            <div ref={refer} className={styleProps + 'absolute top-20 bg-silver-200 dark:bg-firefly-950  right-0 w-0 h-[0vh] overflow-hidden md:hidden z-50 transition-all duration-400 ease-linear flex justify-center '} >
 
                 <div className='p-3 flex flex-col justify-evenly gap-5 '>
                     {
@@ -22,10 +22,7 @@ const MenuDesplegable = ({ className: styleProps, refer, actulizarEstadoMenu }) 
                         ))
                     }
                     <ListaRedes className='flex gap-5 text-silver-950 dark:text-silver-100' />
-
                 </div>
-
-
             </div>
         </>
     )

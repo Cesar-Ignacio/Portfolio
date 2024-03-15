@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-@import '@fontsource-variable/onest';
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
 html{
     scroll-behavior: smooth;
 }

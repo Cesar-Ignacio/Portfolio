@@ -1,11 +1,13 @@
 {
   "compilerOptions": {
+    "moduleResolution": "node",
     "jsx": "react",
     "esModuleInterop": true,
     "target": "es2015",
     // ...
     "baseUrl": ".",
     "paths": {
+      "framer-motion": ["node_modules/framer-motion"],
       "@/*": [
         "./src/*"
       ]
