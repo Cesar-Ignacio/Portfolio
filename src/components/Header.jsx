@@ -48,7 +48,7 @@ const Header = () => {
     }
 
     return (
-        <div className='grid grid-cols-2  mx-auto xl:w-[70%] bg-silver-950 sm:rounded-full px-3' >
+        <div className='grid grid-cols-2  mx-auto xl:w-[70%] sm:bg-silver-50 sm:dark:bg-silver-950  sm:rounded-full px-3 sticky  z-50  py-3 top-0 sm:top-5 sm:py-1 bg-silver-200 dark:bg-firefly-950' >
             {/* Logo */}
             <div className='flex items-center'>
                 <span className='font-righteous text-[2rem] text-silver-900 dark:text-silver-200 '>Ces<span className='text-[2rem] text-fountain-blue-700 dark:text-fountain-blue-600 '>Dev.</span></span>
@@ -57,11 +57,6 @@ const Header = () => {
             {/* Navegador */}
             <nav className='justify-self-end self-center '>
                 <ul className='flex gap-5  items-center text-silver-950 dark:text-silver-200 text-[1rem]' >
-                    {/* {
-                        listaSecciones.map((seccion, indice) => (
-                         <li key={indice} className='hidden sm:block  hover:scale-105 transition-transform duration-300 ease-linear '><a href={`#${seccion.id}`}>{t(`header.${seccion.name}`)}</a></li>
-                        ))
-                    } */}
                     <li>
                         <Tabs tabs={listaSecciones} />
                     </li>

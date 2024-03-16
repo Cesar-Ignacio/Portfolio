@@ -15,14 +15,12 @@ function App() {
     <>
       <ChakraProvider>
         <SectionsProvider>
-          <div className='container  mx-auto font-onest'>
-            <header className='container sm:py-1  sticky top-0 z-50  ' >
-              <Header />
-            </header>
-            <main className=' container mx-auto px-3 flex flex-col gap-[2rem] mt-[1.5rem] sm:mt-0  '>
-                <Inicio />
-                <Proyectos/>   
-                <Tecnologias />
+          <div className='container  mx-auto font-onest '>
+            <Header />
+            <main className=' container mx-auto px-3 flex flex-col gap-[2rem] mt-7 '>
+              <Inicio />
+              <Proyectos />
+              <Tecnologias />
             </main>
           </div>
         </SectionsProvider>
