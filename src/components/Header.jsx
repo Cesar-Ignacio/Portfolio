@@ -47,7 +47,7 @@ const Header = () => {
     }
 
     return (
-        <div className='grid grid-cols-2  mx-auto xl:w-[70%] sm:bg-silver-50 sm:dark:bg-silver-950  sm:rounded-full px-3 sticky  z-50  py-3 top-0 sm:top-5 sm:py-1 bg-silver-200 dark:bg-firefly-950' >
+        <div className='grid grid-cols-2  mx-auto xl:w-[70%] sm:bg-silver-50 sm:dark:bg-silver-950  sm:rounded-full px-3 sticky  z-50  py-3 top-0 sm:top-5 sm:py-1 bg-silver-200 dark:bg-firefly-950 mt-0 shadow-md 2xl:mb-[3rem]' >
             {/* Logo */}
             <div className='flex items-center'>
                 <span className='font-righteous text-[2rem] text-silver-900 dark:text-silver-200 '>Ces<span className='text-[2rem] text-fountain-blue-700 dark:text-fountain-blue-600 '>Dev.</span></span>

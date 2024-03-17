@@ -14,7 +14,7 @@ const Inicio = () => {
 
   return (
     <div id='home' className='scroll-mt-[6rem] grid  md:grid-cols-2 
-     mx-auto rounded-[2rem] dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative sm:gap-0  xl:w-[70%]  2xl:h-auto h-[90vh] py-[9rem] md:p-0 '>
+     mx-auto rounded-[2rem] dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative sm:gap-0  xl:w-[70%]  2xl:h-auto h-[80vh]  '>
 
       {/* Efecto en pantalla */}
       <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill='#088c96' />
