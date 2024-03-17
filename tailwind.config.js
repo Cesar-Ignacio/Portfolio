@@ -148,8 +148,9 @@ module.exports = {
 
       fontFamily:{
         'righteous':['Righteous'],
-        // 'onest':["Onest Variable",'sans-serif'],
-        'onest':['Onest']
+        'onest':['Onest'],
+        'nunito':['Nunito'],
+        'poppins':['Poppins']
       }
 
     },

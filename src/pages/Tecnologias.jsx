@@ -31,7 +31,7 @@ const Tecnologias = () => {
       <div className=" transition-all duration-300 ease-linear absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-[#1a2b2b] bg-silver-200 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,#1a2b2b)]"></div>
       {/* SubTitulo y descripción */}
       <div className='text-silver-950 dark:text-silver-100 tracking-[1px] relative z-20 '>
-        <h2 className='text-[2rem] md:text-[2.5rem] font-bold bg-clip-text xl:dark:text-transparent bg-gradient-to-bl from-silver-100 to-silver-400' >{t("technologies.title")}</h2>
+        <h2 className='text-[2rem] md:text-[2.5rem] font-bold bg-clip-text xl:dark:text-transparent bg-gradient-to-bl from-silver-100 to-silver-400 font-poppins' >{t("technologies.title")}</h2>
         <p>{t("technologies.description")}</p>
       </div>
       {/* Contenido de tec */}

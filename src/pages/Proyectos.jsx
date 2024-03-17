@@ -17,7 +17,7 @@ const Proyectos = () => {
             <div className=" transition-all duration-300 ease-linear absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-[#1a2b2b] bg-silver-200 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,#1a2b2b)]"></div>
             {/* Titulo */}
             <div className='text-silver-950 dark:text-silver-100 tracking-[1px] relative z-20 '>
-                <h2 className='text-[2rem] md:text-[2.5rem] font-bold bg-clip-text xl:dark:text-transparent bg-gradient-to-bl from-silver-100 to-silver-400' >Proyectos</h2>
+                <h2 className='text-[2rem] md:text-[2.5rem] font-bold bg-clip-text xl:dark:text-transparent bg-gradient-to-bl from-silver-100 to-silver-400 font-poppins' >Proyectos</h2>
             </div>
             <div className='grid lg:grid-cols-3 gap-1 mt-4 '>
                 <div className='rounded-lg bg-silver-800 p-[4px] flex flex-col gap-2 z-10  h-fit self-center'>

@@ -15,7 +15,7 @@ function App() {
     <>
       <ChakraProvider>
         <SectionsProvider>
-          <div className='container  mx-auto font-onest '>
+          <div className='container  mx-auto font-nunito '>
             <Header />
             <main className=' container mx-auto px-3 flex flex-col gap-[2rem] mt-7 '>
               <Inicio />
