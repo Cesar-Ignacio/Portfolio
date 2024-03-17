@@ -14,7 +14,7 @@ const Inicio = () => {
 
   return (
     <div id='home' className='scroll-mt-[6rem] grid  md:grid-cols-2 
-     mx-auto rounded-[2rem] dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative sm:gap-0  xl:w-[70%]  2xl:h-auto h-[90vh] py-[7rem] '>
+     mx-auto rounded-[2rem] dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative sm:gap-0  xl:w-[70%]  2xl:h-auto h-[90vh] py-[9rem] md:p-0 '>
 
       {/* Efecto en pantalla */}
       <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill='#088c96' />
@@ -24,7 +24,7 @@ const Inicio = () => {
       duration-300 ease-linear"></div>
 
       {/* Presentacion */}
-      <div className='justify-self-center self-center text-silver-950
+      <div className='justify-self-center self-center text-silver-950 
        dark:text-silver-100 tracking-[1px] relative z-20  md:col-start-1 md:col-end-2  flex flex-col gap-5'>
         <div className='flex flex-col '>
           <h1 className='titulo text-[2.3rem] sm:text-[2.5rem] lg:text-[3.5rem] text-center md:text-start bg-clip-text xl:dark:text-transparent bg-gradient-to-bl from-silver-100 to-silver-400 font-bold '>César Tello</h1>
@@ -39,8 +39,8 @@ const Inicio = () => {
       </div>
 
       {/* Avatar */}
-      <div className='flex  items-center justify-self-center row-start-1  
-      md:col-start-2 md:col-end-3  md:pb-[1rem] lg:pb-[0rem] ' >
+      <div className='flex  items-center justify-self-center row-start-1 
+     md:col-start-2 md:col-end-3  md:pb-[1rem] lg:pb-[0rem] ' >
         <Avatar className='border-[3px] border-white   shadow-shark-900 dark:shadow-fountain-blue-300  shadow-[0px_0px_10px] 
           w-[12rem] h-[12rem] md:w-[17rem] md:h-[17rem] lg:w-[20rem] lg:h-[20rem] z-20 '>
           <AvatarImage src="https://res.cloudinary.com/drutrk0me/image/upload/f_auto,q_auto/dyqgg9j9ufpe8iuualyj
