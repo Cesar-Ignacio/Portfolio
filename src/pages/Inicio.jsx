@@ -14,7 +14,7 @@ const Inicio = () => {
 
   return (
     <div id='home' className='scroll-mt-[6rem] grid  md:grid-cols-2 
-     mx-auto rounded-[2rem] dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative gap-2 sm:gap-0  xl:w-[70%] h-[80vh] 2xl:h-auto '>
+     mx-auto rounded-[2rem] dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative sm:gap-0  xl:w-[70%]  2xl:h-auto h-[90vh] py-[7rem] '>
 
       {/* Efecto en pantalla */}
       <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill='#088c96' />
@@ -40,7 +40,7 @@ const Inicio = () => {
 
       {/* Avatar */}
       <div className='flex  items-center justify-self-center row-start-1  
-      md:col-start-2 md:col-end-3  md:pb-[1rem] lg:pb-[0rem]' >
+      md:col-start-2 md:col-end-3  md:pb-[1rem] lg:pb-[0rem] ' >
         <Avatar className='border-[3px] border-white   shadow-shark-900 dark:shadow-fountain-blue-300  shadow-[0px_0px_10px] 
           w-[12rem] h-[12rem] md:w-[17rem] md:h-[17rem] lg:w-[20rem] lg:h-[20rem] z-20 '>
           <AvatarImage src="https://res.cloudinary.com/drutrk0me/image/upload/f_auto,q_auto/dyqgg9j9ufpe8iuualyj
