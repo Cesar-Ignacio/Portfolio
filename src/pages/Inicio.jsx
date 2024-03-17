@@ -28,7 +28,7 @@ const Inicio = () => {
             <h2 className='text-[1.5rem] pt-1  text-fountain-blue-700 dark:text-fountain-blue-600 font-poppins '>{t("presentation.specialty")}</h2>
             <iframe className='w-[2.8rem] h-[2.8rem]' title="GatitoProgramador" src="https://lottie.host/embed/dbb5c84b-7675-4da0-b8ae-820af9f17c24/GokBzvyzUc.json" ></iframe>
           </div>
-          <p className='text-[1.1rem] font-bold'>{t("presentation.summary")}</p>
+          <p className='text-[1.1rem]'>{t("presentation.summary")}</p>
         </div>
         {/* Redes */}
         <ListaRedes className=' flex justify-start gap-5' />
@@ -46,8 +46,8 @@ const Inicio = () => {
 
       </div>
       {/* Patrones e imagen*/}
-      <div className='absolute bottom-0 righ-0 w-[100%] h-[100%] overflow-hidden z-[5] '>
-        <img src="https://res.cloudinary.com/drutrk0me/image/upload/v1710710811/samples/ah2yvhr7vniwii1sjlhf.png" alt="ing" className='size-[40rem] object-contain bottom-[-0rem] right-[-5rem] absolute z-[-1] drop-shadow-[-9px_-2px_0px_#f7f7f7] invisible md:visible' />
+      <div className='absolute bottom-0 righ-0 w-[100%] h-[100%] overflow-hidden z-[5] invisible md:visible'>
+        <img src="https://res.cloudinary.com/drutrk0me/image/upload/v1710710811/samples/ah2yvhr7vniwii1sjlhf.png" alt="ing" className='size-[40rem] object-contain bottom-[-0rem] right-[-5rem] absolute z-[-1] drop-shadow-[-9px_-2px_0px_#f7f7f7] ' />
         <span className='rotate-[90deg] text-[#3d646290] font-poppins font-bold text-[15rem] absolute top-[12rem] right-[-19rem]'>CESAR</span>
         <span className='rotate-[90deg] text-[#3d64629a] font-poppins font-bold text-[12rem] absolute top-[12rem] right-[7rem] z-[-2]'>TELLO</span>
       </div>
