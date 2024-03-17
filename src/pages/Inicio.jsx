@@ -35,7 +35,7 @@ const Inicio = () => {
 
       </div>
 
-      {/* Avatar */}
+      {/* Avatar sm*/}
       <div className='flex  items-center justify-self-center row-start-1 md:invisible 
      md:col-start-2 md:col-end-3  md:pb-[1rem] lg:pb-[0rem] ' >
         <Avatar className='border-[3px] border-white   shadow-shark-900 dark:shadow-fountain-blue-300  shadow-[0px_0px_10px] 
@@ -45,7 +45,7 @@ const Inicio = () => {
         </Avatar>
 
       </div>
-      {/* Patrones e imagen*/}
+      {/* Avatar xl*/}
       <div className='absolute bottom-0 righ-0 w-[100%] h-[100%] overflow-hidden z-[5] invisible md:visible'>
         <img src="https://res.cloudinary.com/drutrk0me/image/upload/v1710710811/samples/ah2yvhr7vniwii1sjlhf.png" alt="ing" className='size-[40rem] object-contain bottom-[-0rem] right-[-5rem] absolute z-[-1] drop-shadow-[-9px_-2px_0px_#f7f7f7] ' />
         <span className='rotate-[90deg] text-[#3d646290] font-poppins font-bold text-[15rem] absolute top-[12rem] right-[-19rem]'>CESAR</span>
