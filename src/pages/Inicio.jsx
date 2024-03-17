@@ -29,7 +29,7 @@ const Inicio = () => {
             <h2 className='text-[1.5rem] pt-1  text-fountain-blue-700 dark:text-fountain-blue-600 font-poppins '>{t("presentation.specialty")}</h2>
             <iframe className='w-[2.8rem] h-[2.8rem]' title="GatitoProgramador" src="https://lottie.host/embed/dbb5c84b-7675-4da0-b8ae-820af9f17c24/GokBzvyzUc.json" ></iframe>
           </div>
-          <p>{t("presentation.summary")}</p>
+          <p className='text-[1.1rem]'>{t("presentation.summary")}</p>
         </div>
         {/* Redes */}
         <ListaRedes className=' flex justify-start gap-5' />
