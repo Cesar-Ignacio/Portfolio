@@ -5,6 +5,7 @@ import Inicio from './pages/Inicio'
 import { SectionsProvider } from './context/SectionsContext';
 import Tecnologias from './pages/Tecnologias';
 import Proyectos from './pages/Proyectos';
+import Prueba from './pages/Prueba';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
               <Inicio />
               <Proyectos />
               <Tecnologias />
+              <Prueba/>
             </main>
           </div>
         </SectionsProvider>
