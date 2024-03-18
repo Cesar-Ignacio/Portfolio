@@ -12,7 +12,7 @@ const Proyectos = () => {
     };
 
     return (
-        <div className='xl:w-[70%] mx-auto container scroll-mt-[6rem] dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative] relative ' id='pro'>
+        <div className='xl:w-[70%] mx-auto container scroll-mt-[6rem] dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative] relative bg-red-500' id='pro'>
             {/* Radial gradient for the container to give a faded look */}
             <div className=" transition-all duration-300 ease-linear absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-[#1a2b2b] bg-silver-200 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,#1a2b2b)]"></div>
             {/* Titulo */}
