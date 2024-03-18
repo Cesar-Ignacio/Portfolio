@@ -22,7 +22,7 @@ function App() {
               <Inicio />
               <Proyectos />
               <Tecnologias />
-              <Prueba/>
+              {/* <Prueba/> */}
             </main>
           </div>
         </SectionsProvider>
