@@ -5,6 +5,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { useTranslation } from 'react-i18next';
 import ListaRedes from '../components/ListaRedes'
 import SeccionConteiner from '../components/SeccionConteiner';
+import imgCesar from '../assets/imgCesar.webp'
 const Inicio = () => {
 
   const [t] = useTranslation("global")
@@ -44,14 +45,14 @@ const Inicio = () => {
      md:col-start-2 md:col-end-3  md:pb-[1rem] lg:pb-[0rem] ' >
             <Avatar className='border-[3px] border-white   shadow-shark-900 dark:shadow-fountain-blue-300  shadow-[0px_0px_10px] 
           w-[12rem] h-[12rem] md:w-[17rem] md:h-[17rem] lg:w-[20rem] lg:h-[20rem] z-20 '>
-              <AvatarImage src="https://res.cloudinary.com/drutrk0me/image/upload/v1710710811/samples/ah2yvhr7vniwii1sjlhf.png" className='object-cover' />
+              <AvatarImage src="https://res.cloudinary.com/drutrk0me/image/upload/v1710710811/samples/ah2yvhr7vniwii1sjlhf.png" className='object-cover' alt={"CesarTello"} />
               <AvatarFallback>CA</AvatarFallback>
             </Avatar>
 
           </div>
           {/* Avatar xl*/}
           <div className='absolute bottom-0 righ-0 w-[100%] h-[100%] overflow-hidden z-[5] invisible md:visible'>
-            <img src="https://res.cloudinary.com/drutrk0me/image/upload/v1710710811/samples/ah2yvhr7vniwii1sjlhf.png" alt="ing" className='size-[40rem] object-contain bottom-[-0rem] right-[-5rem] absolute z-[-1] drop-shadow-[-9px_-2px_0px_#f7f7f7] ' />
+            <img src={imgCesar} alt="CesarTello" className='size-[40rem] object-contain bottom-[-0rem] right-[-5rem] absolute z-[-1] drop-shadow-[-9px_-2px_0px_#f7f7f7] ' />
             <span className='rotate-[90deg] text-[#3d646290] font-poppins font-bold text-[15rem] absolute top-[12rem] right-[-19rem]'>CESAR</span>
             <span className='rotate-[90deg] text-[#3d64629a] font-poppins font-bold text-[12rem] absolute top-[12rem] right-[7rem] z-[-2]'>TELLO</span>
           </div>
