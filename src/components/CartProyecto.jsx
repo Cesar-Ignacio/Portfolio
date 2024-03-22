@@ -2,7 +2,6 @@ import React from 'react'
 import VercelIcon from '../icono/VercelIcon'
 import NetiflyIcon from '../icono/NetiflyIcon'
 import '../components/cartProyecto.css'
-import viveGear from '@/assets/viveGear.webp';
 const CartProyecto = ( {proyecto} ) => {
     return (
         <div className='rounded-lg bg-silver-800 p-[4px] flex flex-col gap-1 z-10 h-fit' key={proyecto.id}>
