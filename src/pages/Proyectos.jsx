@@ -2,8 +2,7 @@ import React, { useEffect,  useState } from 'react'
 import SeccionConteiner from '../components/SeccionConteiner'
 import { collection, getDocs } from 'firebase/firestore'
 import db from '../db/db'
-import NetiflyIcon from '../icono/NetiflyIcon'
-import VercelIcon from '../icono/VercelIcon'
+
 import CartProyecto from '../components/CartProyecto'
 
 
@@ -12,6 +11,7 @@ const Proyectos = () => {
 
     const [listaProyectos, setListaProyecto] = useState()
 
+   
 
     useEffect(() => {
 
