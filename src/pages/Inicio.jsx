@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import ListaRedes from '../components/ListaRedes'
 import SeccionConteiner from '../components/SeccionConteiner';
 import imgCesar from '../assets/imgCesar.webp'
+
 const Inicio = () => {
 
   const [t] = useTranslation("global")
@@ -52,8 +53,8 @@ const Inicio = () => {
           </div>
           {/* Avatar xl*/}
           <div className='absolute bottom-0 righ-0 w-[100%] h-[100%] overflow-hidden z-[5] invisible md:visible'>
-            <img src={imgCesar} alt="CesarTello" className='size-[40rem] object-contain bottom-[-0rem] right-[-5rem] absolute z-[-1] drop-shadow-[-9px_-2px_0px_#f7f7f7] ' />
-            <span className='rotate-[90deg] text-[#3d646290] font-poppins font-bold text-[15rem] absolute top-[12rem] right-[-19rem]'>CESAR</span>
+            <img src={imgCesar} alt="CesarTello" className='size-[40rem] object-contain bottom-[-0rem] right-[-5rem] absolute z-[-1] drop-shadow-[-9px_-2px_0px_#f7f7f7]' />
+            <span className='rotate-[90deg] text-[#3d646290] font-poppins font-bold text-[15rem] absolute top-[12rem] right-[-19rem] '>CESAR</span>
             <span className='rotate-[90deg] text-[#3d64629a] font-poppins font-bold text-[12rem] absolute top-[12rem] right-[7rem] z-[-2]'>TELLO</span>
           </div>
 
