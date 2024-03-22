@@ -7,7 +7,7 @@ const CartProyecto = ( {proyecto} ) => {
     return (
         <div className='rounded-lg bg-silver-800 p-[4px] flex flex-col gap-1 z-10 h-fit' key={proyecto.id}>
             <div className='relative rounded-lg overflow-hidden'>
-                <img className='rounded-lg img' src={viveGear} alt={proyecto.nombre} />
+                <img className='rounded-lg img' src={proyecto.urlImg} alt={proyecto.nombre} />
                 <div className='absolute w-full bottom-0 px-2 flex justify-between ' >
                     <span className='text-silver-50'>{proyecto.nombre}</span>
                     <span className='text-silver-300'>{proyecto.fecha}</span>
