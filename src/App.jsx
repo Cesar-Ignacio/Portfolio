@@ -6,6 +6,8 @@ import { SectionsProvider } from './context/SectionsContext';
 import Tecnologias from './pages/Tecnologias';
 import Proyectos from './pages/Proyectos';
 import Prueba from './pages/Prueba';
+import Contacto from './pages/Contacto';
+
 
 function App() {
 
@@ -22,6 +24,7 @@ function App() {
               <Inicio />
               <Proyectos />
               <Tecnologias />
+              <Contacto/>
               {/* <Prueba/> */}
             </main>
           </div>

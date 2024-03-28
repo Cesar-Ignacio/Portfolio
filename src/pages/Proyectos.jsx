@@ -3,7 +3,7 @@ import SeccionConteiner from '../components/SeccionConteiner'
 import { collection, getDocs } from 'firebase/firestore'
 import db from '../db/db'
 
-import CartProyecto from '../components/CartProyecto'
+import CartProyecto from '../components/cartProyecto/CartProyecto'
 
 
 const Proyectos = () => {
