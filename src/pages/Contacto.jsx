@@ -41,7 +41,7 @@ const Contacto = () => {
                 <div className='text-silver-950 dark:text-silver-100 tracking-[1px] relative z-20 '>
                     <h2 className='text-[2rem] md:text-[2.5rem] font-bold bg-clip-text xl:dark:text-transparent bg-gradient-to-bl from-silver-100 to-silver-400 font-poppins' >Contacto</h2>
                 </div>
-                <div className='grid sm:grid-cols-2 gap-2'>
+                <div className='grid sm:grid-cols-2 gap-2 mt-4'>
                     <div className='border-solid border-shark-700 border-[1px] p-2 z-20 rounded-lg '>
                         <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col gap-4' >
                             <div>
