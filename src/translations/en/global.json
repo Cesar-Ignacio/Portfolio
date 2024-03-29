@@ -9,8 +9,16 @@
         "specialty": "FrontEnd developer",
         "summary": "Welcome to my portfolio! I am a graduate programmer from the UTN FRGP in  Argentina. Currently, I am exploring this vast world and learning to one day contribute my bit to the community "
     },
+    "projects":{
+        "title":"Projects"
+    },
     "technologies": {
         "title": "Technologies",
         "description": "In this section, I present the technologies I use as a programmer. Additionally, I will share some useful resources that may be helpful to you."
+    },
+    "contact":{
+        "title":"Contact",
+        "descriptionOne":"If you have any inquiries, questions, or just want to talk about this great world of programming or other interesting things, feel free to contact me.",
+        "descriptionTwo":"The email field is optional, but if you want me to get in touch with you, it's necessary to fill it out."
     }
 }

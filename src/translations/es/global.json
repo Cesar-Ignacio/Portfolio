@@ -11,10 +11,18 @@
         "summary":"¡Bienvenido a mi portafolio! Soy programador graduado de la UTN FRGP en Argentina. Actualmente sigo explorando este gran mundo y aprendiendo para algun día aportar mi granito de arena a la comunidad."
 
     },
+    "projects":{
+        "title":"Projectos"
+    },
     "technologies":{
         "title":"Tecnologías",
         "description": "En esta sección, te presento las tecnologías que utilizo como programador. Además, compartiré algunos recursos útiles que pueden servirte."
 
+    },
+    "contact":{
+        "title":"Contacto",
+        "descriptionOne":"Si tienes alguna consulta, pregunta o simplemente quieres hablar sobre este gran mundo de la programación u otras cosas interesantes, contáctame.",
+        "descriptionTwo":"El campo de correo electrónico es opcional, pero si deseas que me comunique contigo, es necesario que lo completes."
     }
 
 }

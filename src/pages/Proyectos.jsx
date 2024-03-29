@@ -4,14 +4,15 @@ import { collection, getDocs } from 'firebase/firestore'
 import db from '../db/db'
 
 import CartProyecto from '../components/cartProyecto/CartProyecto'
+import { useTranslation } from 'react-i18next'
 
 
 const Proyectos = () => {
 
 
     const [listaProyectos, setListaProyecto] = useState()
-
-   
+    
+    const [t]=useTranslation("global")
 
     useEffect(() => {
 
@@ -32,7 +33,7 @@ const Proyectos = () => {
                 
                 {/* Titulo */}
                 <div className='text-silver-950 dark:text-silver-100 tracking-[1px] relative z-20 '>
-                    <h2 className='text-[2rem] md:text-[2.5rem] font-bold bg-clip-text xl:dark:text-transparent bg-gradient-to-bl from-silver-100 to-silver-400 font-poppins' >Proyectos</h2>
+                    <h2 className='text-[2rem] md:text-[2.5rem] font-bold bg-clip-text xl:dark:text-transparent bg-gradient-to-bl from-silver-100 to-silver-400 font-poppins' >{t("projects.title")}</h2>
                 </div>
                 {/* Galeria de proyectos */}
                 <div className='grid sm:grid-cols-2  gap-2 mt-4' >
