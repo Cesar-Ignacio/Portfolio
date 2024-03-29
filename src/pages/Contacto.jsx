@@ -3,11 +3,11 @@ import SeccionConteiner from '../components/SeccionConteiner'
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
-import { Input, InputGroup, InputLeftElement, Textarea } from '@chakra-ui/react'
+import { Input, InputGroup, InputLeftElement, Textarea, useToast } from '@chakra-ui/react'
 import { AtSignIcon, QuestionIcon } from '@chakra-ui/icons'
 import WhatsAppIcon from '../icono/WhatsAppIcon'
 import MiEmailIcon from '../icono/MiEmailIcon'
-
+import emailjs from '@emailjs/browser';
 
 
 const schema = yup
@@ -18,11 +18,19 @@ const schema = yup
     .required()
 
 const Contacto = () => {
+
+    const toast = useToast()
     const { register, handleSubmit, formState: { errors } } = useForm({ resolver: yupResolver(schema), })
 
-    const onSubmit = async (data) => {
+    const onSubmit = (data) => {
 
-        console.log(data)
+        const results = emailjs.send('service_511vx2e', 'template_jiyczbt', data, { publicKey: 'bVFjtqS0Rjwa5ZOxs', });
+     
+        toast.promise(results, {
+            success: { title: 'Mensaje enviado', description: 'Looks great' , position: 'bottom-right'},
+            error: { title: 'Promise rejected', description: 'Something wrong', position: 'bottom-right' },
+            loading: { title: 'Enviando mensaje', description: 'Please wait' ,position: 'bottom-right' },
+        })
     }
 
 
@@ -53,15 +61,15 @@ const Contacto = () => {
                                 <Input type='tel' bg='#f7f7f7' placeholder='qwerty@qw.v' {...register("email")} />
                             </InputGroup>
 
-                            <Textarea placeholder='Escribe el mesaje' bg='#f7f7f7' />
+                            <Textarea placeholder='Escribe el mesaje' bg='#f7f7f7' {...register("descripcion")} />
 
                             <input type="submit" className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md  bg-[linear-gradient(110deg,#323c48,45%,#637b94,55%,#323c48)] bg-[length:200%_100%] px-6 font-medium text-silver-50 tracking-[1.5px] transition-colors " />
 
                         </form>
                     </div>
                     <div className='border-solid border-shark-700 border-[1px] p-2 z-20 rounded-lg flex justify-evenly'>
-                       <WhatsAppIcon/>
-                       <MiEmailIcon/>
+                        <WhatsAppIcon />
+                        <MiEmailIcon />
                     </div>
                 </div>
 
