@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import ListaRedes from '../components/ListaRedes'
 import SeccionConteiner from '../components/SeccionConteiner';
 import imgCesar from '../assets/imgCesar.webp'
-
+import iaImg from '../assets/iaImg.png'
 const Inicio = () => {
 
   const [t] = useTranslation("global")
@@ -29,7 +29,7 @@ const Inicio = () => {
           <div className='justify-self-center self-center text-silver-950 
        dark:text-silver-100 tracking-[1px] relative z-20 md:col-start-1 md:col-end-2  flex flex-col gap-5'>
             <div className='flex flex-col '>
-              <h1 className='titulo text-[3.8rem] md:text-[3.8rem] lg:text-[4.7rem] text-center md:text-start bg-clip-text xl:dark:text-transparent bg-gradient-to-bl from-silver-100 to-silver-400 font-bold font-poppins'>César Tello</h1>
+              <h1 className='titulo text-[3.8rem] md:text-[3.8rem] lg:text-[4rem] text-center md:text-start bg-clip-text xl:dark:text-transparent bg-gradient-to-bl from-silver-100 to-silver-400 font-bold font-poppins'>César I. Tello</h1>
               <div className='flex items-center '>
                 <h2 className='text-[1.5rem] pt-1  text-fountain-blue-700 dark:text-fountain-blue-600 font-poppins '>{t("presentation.specialty")}</h2>
                 <iframe className='w-[2.8rem] h-[2.8rem]' title="GatitoProgramador" src="https://lottie.host/embed/dbb5c84b-7675-4da0-b8ae-820af9f17c24/GokBzvyzUc.json" ></iframe>
@@ -53,7 +53,7 @@ const Inicio = () => {
           </div>
           {/* Avatar xl*/}
           <div className='absolute bottom-0 righ-0 w-[100%] h-[100%] overflow-hidden z-[5] invisible md:visible'>
-            <img src={imgCesar} alt="CesarTello" className='size-[40rem] object-contain bottom-[-0rem] right-[-5rem] absolute z-[-1] drop-shadow-[-9px_-2px_0px_#f7f7f7]' />
+            <img src={iaImg} alt="CesarTello" className='size-[40rem] object-contain bottom-[-0rem] right-[-5rem] absolute z-[-1] drop-shadow-[-9px_-2px_0px_#f7f7f7]' />
             <span className='rotate-[90deg] text-[#3d646290] font-poppins font-bold text-[15rem] absolute top-[12rem] right-[-19rem] '>CESAR</span>
             <span className='rotate-[90deg] text-[#3d64629a] font-poppins font-bold text-[12rem] absolute top-[12rem] right-[7rem] z-[-2]'>TELLO</span>
           </div>

@@ -28,7 +28,7 @@ const Tecnologias = () => {
 
   return (
     <>
-      <SeccionConteiner id='tec' className='scroll-mt-[4rem] '>
+      <SeccionConteiner id='tec' className='scroll-mt-[5rem] '>
           <div className='text-silver-950 dark:text-silver-100 tracking-[1px] relative z-20 '>
             <h2 className='text-[2rem] md:text-[2.5rem] font-bold bg-clip-text xl:dark:text-transparent bg-gradient-to-bl from-silver-100 to-silver-400 font-poppins' >{t("technologies.title")}</h2>
             <p>{t("technologies.description")}</p>

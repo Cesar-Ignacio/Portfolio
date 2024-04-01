@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React from 'react'
 import SeccionConteiner from '../components/SeccionConteiner'
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
@@ -21,17 +21,13 @@ const Contacto = () => {
     const { register, handleSubmit, formState: { errors } } = useForm({ resolver: yupResolver(schema), })
     const onSubmit = (data) => {
 
-        // const results = emailjs.send('service_511vx2e', 'template_jiyczbt', data, { publicKey: 'bVFjtqS0Rjwa5ZOxs', });
+        const results = emailjs.send('service_511vx2e', 'template_jiyczbt', data, { publicKey: 'bVFjtqS0Rjwa5ZOxs', });
 
-        // toast.promise(results, {
-        //     success: { title: 'Mensaje enviado', description: 'Looks great', position: 'bottom-right' },
-        //     error: { title: 'Promise rejected', description: 'Something wrong', position: 'bottom-right' },
-        //     loading: { title: 'Enviando mensaje', description: 'Please wait', position: 'bottom-right' },
-        // })
-
-
-        
-
+        toast.promise(results, {
+            success: { title: 'Mensaje enviado', description: 'Looks great', position: 'bottom-right' },
+            error: { title: 'Promise rejected', description: 'Something wrong', position: 'bottom-right' },
+            loading: { title: 'Enviando mensaje', description: 'Please wait', position: 'bottom-right' },
+        })
     }
 
     const [t] = useTranslation('global');
@@ -39,7 +35,7 @@ const Contacto = () => {
 
     return (
         <>
-            <SeccionConteiner id={'con'} className={'w-full '}>
+            <SeccionConteiner id={'con'} className={'w-full scroll-mt-[5rem] '}>
                 {/* Titulo */}
                 <div className='text-silver-950 dark:text-silver-100 tracking-[1px] relative z-20 '>
                     <h2 className='text-[2rem] md:text-[2.5rem] font-bold bg-clip-text xl:dark:text-transparent bg-gradient-to-bl from-silver-100 to-silver-400 font-poppins' >{t("contact.title")}</h2>

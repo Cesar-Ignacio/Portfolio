@@ -7,6 +7,7 @@ import Tecnologias from './pages/Tecnologias';
 import Proyectos from './pages/Proyectos';
 import Prueba from './pages/Prueba';
 import Contacto from './pages/Contacto';
+import Footer from './pages/Footer';
 
 
 function App() {
@@ -25,8 +26,8 @@ function App() {
               <Proyectos />
               <Tecnologias />
               <Contacto/>
-              {/* <Prueba/> */}
             </main>
+            <Footer/>
           </div>
         </SectionsProvider>
       </ChakraProvider>

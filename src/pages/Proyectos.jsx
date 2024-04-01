@@ -29,7 +29,7 @@ const Proyectos = () => {
 
     return (
         <>
-            <SeccionConteiner id='pro' className='scroll-mt-[4rem] ' >
+            <SeccionConteiner id='pro' className='scroll-mt-[5rem] ' >
                 
                 {/* Titulo */}
                 <div className='text-silver-950 dark:text-silver-100 tracking-[1px] relative z-20 '>
