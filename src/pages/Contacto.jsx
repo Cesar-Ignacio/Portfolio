@@ -46,7 +46,7 @@ const Contacto = () => {
                 </div>
                 {/* Parrafos y formulario */}
                 <div className='grid sm:grid-cols-2 gap-2 mt-4 '>
-                    <div className='text-[1.1rem] py-2 z-20 rounded-lg text-silver-950  dark:text-silver-100 flex flex-col gap-2'>
+                    <div className='text-[1.1rem] py-2 z-20 rounded-lg text-silver-950  dark:text-silver-100 flex flex-col gap-7'>
                         <p>{t("contact.descriptionOne")}</p>
                         <p>{t("contact.descriptionTwo")}</p>
                     </div>
@@ -63,8 +63,6 @@ const Contacto = () => {
                                 <p className='text-red-800 dark:text-red-300 px-1'>{errors.subject?.message}</p>
                             </div>
 
-                          
-
                             <InputGroup>
                                 <InputLeftElement pointerEvents='none'>
                                     <AtSignIcon color='#363636' />
@@ -79,7 +77,6 @@ const Contacto = () => {
                         </form>
                     </div>
                 </div>
-
             </SeccionConteiner>
         </>
     )
