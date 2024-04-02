@@ -1,12 +1,12 @@
 
 import { ChakraProvider } from '@chakra-ui/react';
-import Header from './components/Header'
 import Inicio from './pages/Inicio'
 import { SectionsProvider } from './context/SectionsContext';
 import Tecnologias from './pages/Tecnologias';
 import Proyectos from './pages/Proyectos';
 import Contacto from './pages/Contacto';
 import Footer from './pages/Footer';
+import Header from './pages/Header';
 
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
       <ChakraProvider>
         <SectionsProvider>
           <div className='container  mx-auto font-nunito '>
-            <Header />
+            <Header/>
             <main className=' container mx-auto px-3 flex flex-col gap-[2rem] mt-7 '>
               <Inicio />
               <Proyectos />

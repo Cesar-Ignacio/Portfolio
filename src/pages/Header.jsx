@@ -4,9 +4,11 @@ import React, { useContext, useRef, useState } from 'react'
 import { SectionsContext } from '../context/SectionsContext';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { useTranslation } from 'react-i18next';
-import MenuDesplegable from './MenuDesplegable';
+import MenuDesplegable from '../components/MenuDesplegable';
 import { openMenu, closeMenu } from '../lib/utils'
 import { Tabs } from "../components/ui/tabs";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import imgCesar from '../assets/elfo.jpg'
 const Header = () => {
 
     const refer = useRef();
@@ -50,7 +52,11 @@ const Header = () => {
         <div className='grid grid-cols-2  mx-auto xl:w-[70%] sm:bg-silver-50 sm:dark:bg-silver-950  sm:rounded-full px-3 sticky  z-50  py-3 top-0 sm:top-5 sm:py-1 bg-silver-200 dark:bg-firefly-950 mt-0 shadow-md 2xl:mb-[3rem]' >
             {/* Logo */}
             <div className='flex items-center'>
-                <span className='font-righteous text-[2rem] text-silver-900 dark:text-silver-200 '>Ces<span className='text-[2rem] text-fountain-blue-700 dark:text-fountain-blue-600 '>Dev.</span> </span>
+                {/* <span className='font-righteous text-[2rem] text-silver-900 dark:text-silver-200 '>Ces<span className='text-[2rem] text-fountain-blue-700 dark:text-fountain-blue-600 '>Dev.</span> </span> */}
+                <Avatar className=''>
+                    <AvatarImage src={imgCesar} className='object-cover' />
+                    <AvatarFallback>SJ</AvatarFallback>
+                </Avatar>
             </div>
 
             {/* Navegador */}
@@ -59,7 +65,6 @@ const Header = () => {
                     <li>
                         <Tabs tabs={listaSecciones} />
                     </li>
-
                     {/* IDIOMA */}
                     <li className='flex'>
                         <Select onValueChange={(e) => i18n.changeLanguage(e)} >
