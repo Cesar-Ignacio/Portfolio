@@ -5,7 +5,6 @@ import Inicio from './pages/Inicio'
 import { SectionsProvider } from './context/SectionsContext';
 import Tecnologias from './pages/Tecnologias';
 import Proyectos from './pages/Proyectos';
-import Prueba from './pages/Prueba';
 import Contacto from './pages/Contacto';
 import Footer from './pages/Footer';
 
