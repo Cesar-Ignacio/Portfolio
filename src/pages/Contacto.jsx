@@ -41,8 +41,8 @@ const Contacto = () => {
                     <h2 className='text-[2rem] md:text-[2.5rem] font-bold bg-clip-text xl:dark:text-transparent bg-gradient-to-bl from-silver-100 to-silver-400 font-poppins' >{t("contact.title")}</h2>
                 </div>
                 {/* Parrafos y formulario */}
-                <div className='grid sm:grid-cols-2 gap-2 mt-4 '>
-                    <div className='text-[1.1rem] py-2 z-20 rounded-lg text-silver-950  dark:text-silver-100 flex flex-col gap-7'>
+                <div className='grid sm:grid-cols-2 gap-4 mt-3'>
+                    <div className='text-[1.1rem] z-20 rounded-lg text-silver-950  dark:text-silver-100 flex flex-col gap-7'>
                         <p>{t("contact.descriptionOne")}</p>
                         <p>{t("contact.descriptionTwo")}</p>
                     </div>

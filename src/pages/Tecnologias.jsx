@@ -31,7 +31,7 @@ const Tecnologias = () => {
       <SeccionConteiner id='tec' className='scroll-mt-[5rem] '>
           <div className='text-silver-950 dark:text-silver-100 tracking-[1px] relative z-20 '>
             <h2 className='text-[2rem] md:text-[2.5rem] font-bold bg-clip-text xl:dark:text-transparent bg-gradient-to-bl from-silver-100 to-silver-400 font-poppins' >{t("technologies.title")}</h2>
-            <p>{t("technologies.description")}</p>
+            <p className='mt-3'>{t("technologies.description")}</p>
           </div>
           {/* Contenido de tec */}
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4 w-[100%] mt-4'>
