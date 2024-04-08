@@ -100,17 +100,17 @@ const Tecnologias = () => {
             </svg>
           </div> */}
 
-          <CartContenedor className='' lista={listTecFront} >
+          <CartContenedor className='' lista={listTecFront} sentido="left" >
             <strong className='text-fountain-blue-700 dark:text-fountain-blue-600 text-[1.2rem] tracking-wider font-poppins'>FrontEnd</strong>
             <BackgroTextura/>
           </CartContenedor>
 
-          <CartContenedor lista={listTecBack}>
+          <CartContenedor lista={listTecBack} sentido="right">
             <strong className='text-fountain-blue-700 dark:text-fountain-blue-600 text-[1.2rem] tracking-wider font-poppins'>BackEnd</strong>
             <BackgroTextura/>
           </CartContenedor>
 
-          <CartContenedor className="md:col-span-2" lista={listTecRec}>
+          <CartContenedor className="md:col-span-2" lista={listTecRec} sentido="left">
             <strong className='text-fountain-blue-700 dark:text-fountain-blue-600 text-[1.2rem] tracking-wide font-poppins '>Recursos</strong>
             <BackgroTextura/>
           </CartContenedor>
