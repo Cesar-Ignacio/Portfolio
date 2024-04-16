@@ -8,7 +8,6 @@ type SpotlightProps = {
 
 export const Spotlight = ({ className, fill }: SpotlightProps) => {
   
-  
   return (
     <svg
       className={cn(
