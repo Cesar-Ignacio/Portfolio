@@ -23,8 +23,8 @@ const Thema = () => {
     const iconoTema = (tema) => {
 
         let valor;
-        (tema === "light") ? (valor = -2) : (valor = 1);
-        refIconTema.current.className = `translate-y-[${valor}rem] transition-transform ease-linear`;
+        (tema === "light") ? (valor = -2) : (valor = 0);
+        refIconTema.current.style.transform = "translateY("+valor+"rem)"
 
     }
     useEffect(() => {
@@ -32,7 +32,7 @@ const Thema = () => {
     }, []);
 
     return (
-        <button onClick={cambiarTema} ref={refIconTema}>
+        <button className='transition-all ease-linear' onClick={cambiarTema} ref={refIconTema}>
             <SunIcon/>
             <MoonIcon/>
         </button>
