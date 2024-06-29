@@ -1,6 +1,6 @@
 import React from 'react'
 import { Tooltip } from '@chakra-ui/react'
-import cv from '@/assets/CV-CESAR-TELLO.pdf'
+import cv from '@/assets/CV-CESAR_I_TELLO.pdf'
 
 
 const ListaRedes = ({ className: styleComponet }) => {
